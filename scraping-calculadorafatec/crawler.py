@@ -6,16 +6,14 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-
 import time
 from tqdm import tqdm
-# FUNÇÕES
+
 def salvandoDadosVestibularDFtoCSV(df_,nome_arq,path='ds'):
     df_.to_csv(f'{path}/{nome_arq}.csv', sep=';',index=False)
 
 # precisa deixar global
 def urlListaClassificacaoVestibular(url):
-    
     driver = webdriver.Chrome()
     return driver.get(url)
 
@@ -34,10 +32,29 @@ def criarDicionario(select_,fields):
 
 def criarDataFrame(l):
      return pd.DataFrame(l)
+
+def fatecs():
+    # não precisa disso agora.
+    selectFatecs = Select(classificacao_geral_vest_fatec.find_element(By.ID, 'CodFatec'))
+    listaFatecs = criarDicionario(selectFatecs,['id','fatec'])
+
+    with open('ds/listafatecs.txt','a', encoding="utf-8") as arquivo:
+        arquivo.write(str(listaFatecs))
+
+    dfFatec = criarDataFrame(listaFatecs)
+    salvandoDadosVestibularDFtoCSV(dfFatec,"listaFatecs")
     
+    return dfFatec
+
+def cursos():
+    buscarCursosPopular('https://www.vestibularfatec.com.br/unidades-cursos/?q=')
+    dfCursos = pd.read_csv('ds/listaCursos.csv',sep=';')
+    return dfCursos
+
+
 def buscarCursosPopular(url_cursos):
     rCurso = requests.get(url_cursos)
-    soupCurso = bs(rCurso.content)    
+    soupCurso = bs(rCurso.content,'html.parser')    
     divCursos = soupCurso.find(id = "cursos")
     lista_links=divCursos.find_all("a")
     lista_ = [{'id':245,'curso':'Gestão Empresarial - EaD'}]
@@ -49,28 +66,57 @@ def buscarCursosPopular(url_cursos):
         
     return salvandoDadosVestibularDFtoCSV(criarDataFrame(lista_),'listaCursos')
 
-def ajustarNota(detalhe_nota):
-    return detalhe_nota.text.upper().split(' ')[-6]
-
 def curso_periodo(txt):
     #recebe uma string, faz uma lógica para separar em duas partes. Devolvendo um array de 2 itens. O índice 0 é o curso e o outro o período.
     return (txt.replace(")", "")).split('(')
 
+def demandas_ano_semestre():
+    demanda_por_curso = webdriver.Chrome()
+    demanda_por_curso.get("https://www.vestibularfatec.com.br/demanda/")
 
-#PRECISA MELHORAR A LÓGICA. ANTES DE CRIAR OBJETO, VERIFICAR SE O DATAFRAME JÁ TEM CSV
+    select_ano_sem = Select(demanda_por_curso.find_element(By.NAME,'ano-sem'))
+    lista_ano_sem = criarDicionario(select_ano_sem,['id','ano-sem'])
 
+    with open('ds/lista_demanda_ano_semestre.txt','a', encoding="utf-8") as arquivo:
+        arquivo.write(str(lista_ano_sem))
 
-#POPULAR O DATAFRAMECURSOS
-buscarCursosPopular('https://www.vestibularfatec.com.br/unidades-cursos/?q=')
+    dfDemandaAnoSemestre = criarDataFrame(lista_ano_sem)
+    salvandoDadosVestibularDFtoCSV(dfDemandaAnoSemestre,"listaDemandaAnoSemestre")
+   
 
+def demanda_curso():
+    demanda_por_curso = webdriver.Chrome()
+    demanda_por_curso.get("https://www.vestibularfatec.com.br/demanda/")
 
-dfCursos = pd.read_csv('ds/listaCursos.csv',sep=';')
+    selectOptionsAnoSem = Select(demanda_por_curso.find_element(By.NAME,'ano-sem'))
+    selectOptionsAnoSem.select_by_value('20222') #informar o ano e semestre que quer capturar.
+    frmdemanda = demanda_por_curso.find_element(By.ID, "formDemanda")
 
-dfCursos.head()
+    frmdemanda.find_element(By.CSS_SELECTOR,'button.btn'). submit()
 
-resultado_vestibular_da_fatec = []
-resultado_vestibular_da_fatec2 = [] #Organiza cada fatec em uma array.
+    selectFatecsDemanda = Select(demanda_por_curso.find_element(By.ID,'FATEC'))
+    listaFatecsDemanda = criarDicionario(selectFatecsDemanda,['id','fatec'])
+    dfFatecDemanda = criarDataFrame(listaFatecsDemanda)
 
+    armazenando_resultado_demanda=[]
+    for i in tqdm(range(len (dfFatecDemanda.head(5)))):
+        parcial_demanda = {}
+        id_ = dfFatecDemanda.loc[i,'id']
+        fatec_ = dfFatecDemanda.loc[i,'fatec']
+        selectFatecs = Select(demanda_por_curso.find_element(By.ID,'FATEC'))
+        selectFatecs.select_by_visible_text(fatec_)
+        print(f'{fatec_} - {i+1}')
+
+        demanda_por_curso.find_element(By.CSS_SELECTOR, 'button.btn').submit()  
+        
+        tabela_demanda = demanda_por_curso.find_element(By.CSS_SELECTOR, 'table.table')
+        results=[]
+        for count,cell in enumerate(tabela_demanda.find_elements(By.CSS_SELECTOR,'tbody td')):
+            results.append(cell)
+            print(cell.text,count)    
+        time.sleep(1)
+        #x = {'fatec':fatec_,'demanda'result:results}
+        demanda_por_curso.back()
 
 '''
 lista_info_vestibular_fatec = {
@@ -87,23 +133,20 @@ lista_info_vestibular_fatec = {
     'nota_corte':'',
     'nota_maxima':''
 }
+----------------------------------------------------
+    cod_curso-> Sitema da Calculadora
+    cod_instituicao -> Sistema da Calculadora
+    ano -> ano do vestibular
+    semeste-> semestre do vestibular
+    periodo -> da busca (UPPER())
+    ROBO DEMANDA
+    qtde_vagas-> preencher através de outro robo
+    qtde_inscrito->
+    demanda-> realizar o cálculo
+    nota_corte -> nota min
+    nota_maxima -> nota max
 '''
-#inf
-'''
-cod_curso-> Sitema da Calculadora
-cod_instituicao -> Sistema da Calculadora
-ano -> ano do vestibular
-semeste-> semestre do vestibular
-periodo -> da busca (UPPER())
-ROBO DEMANDA
-qtde_vagas-> preencher através de outro robo
-qtde_inscrito->
-demanda-> realizar o cálculo
-nota_corte -> nota min
-nota_maxima -> nota max
 
-
-'''
 def resultado_fatec():
     resultado_tabela = webdriver.Chrome()
     resultado_tabela.get("https://www.vestibularfatec.com.br/classificacao/lista.asp?codfatec=1&codescolacurso=1999&o=1")
@@ -126,73 +169,23 @@ def resultado_fatec():
         if (cell.text =='Nota'):
             pos_nota = count
 
-def demanda_curso():
-    demanda_por_curso = webdriver.Chrome()
-    demanda_por_curso.get("https://www.vestibularfatec.com.br/demanda/")
 
-
-    select_ano_sem =demanda_por_curso.find_element_by_name('ano-sem')
-
-
-    todos_anos_sem=select_ano_sem.find_elements_by_tag_name("option")
-
-
-    for option in todos_anos_sem:
-        print("Value is: %s" % option.get_attribute("value"))
-        option.click()
-
-    todos_anos_sem[1].click()
-
-    selectOptionsAnoSem = Select(demanda_por_curso.find_element_by_name('ano-sem'))
-    selectOptionsAnoSem.select_by_value('20211') #informar o ano e semestre que quer capturar.
-    frmdemanda = demanda_por_curso.find_element_by_id("formDemanda")
-    frmdemanda.find_element_by_css_selector('button.btn'). submit()
-
-
-    selectFatecsDemanda = Select(demanda_por_curso.find_element_by_id('FATEC'))
-    listaFatecsDemanda = criarDicionario(selectFatecsDemanda,['id','fatec'])
-    dfFatecDemanda = criarDataFrame(listaFatecsDemanda)
-    dfFatecDemanda.head()
-
-
-
-    armazenando_resultado_demanda=[]
-    for i in tqdm(range(len (dfFatecDemanda.head(1)))):
-        parcial_demanda = {}
-        id_ = dfFatecDemanda.loc[i,'id']
-        fatec_ = dfFatecDemanda.loc[i,'fatec']
-        selectFatecs = Select(demanda_por_curso.find_element_by_id('FATEC'))
-        selectFatecs.select_by_visible_text(fatec_)
-        print(f'{fatec_} - {i+1}')
-
-        demanda_por_curso.find_element_by_css_selector('button.btn'). submit()  
-        
-        tabela_demanda = demanda_por_curso.find_element_by_css_selector('table.table')
-        results=[]
-        for count,cell in enumerate(tabela_demanda.find_elements_by_css_selector('tbody td')):
-            
-            results.append(cell)
-            print(cell.text,count)    
-        time.sleep(1)
-        #x = {'fatec':fatec_,'demanda'result:results}
-
-        #demanda_por_curso.back()
+def ajustarNota(detalhe_nota):
+    return detalhe_nota.text.upper().split(' ')[-6]
 
 if __name__ == "__main__":
     #classificacao_geral_vest_fatec = urlListaClassificacaoVestibular('https://www.vestibularfatec.com.br/classificacao/fatec.asp')
     classificacao_geral_vest_fatec = webdriver.Chrome()
     classificacao_geral_vest_fatec.get("https://www.vestibularfatec.com.br/classificacao/fatec.asp")
+    dfFatec = fatecs()
+    #dfFatec.head()
+    
+    dfCursos = cursos()    
+    #dfCursos.head()
 
-    # não precisa disso agora.
-    selectFatecs = Select(classificacao_geral_vest_fatec.find_element(By.ID, 'CodFatec'))
-    listaFatecs = criarDicionario(selectFatecs,['id','fatec'])
-
-    with open('ds/listafatecs.txt','a', encoding="utf-8") as arquivo:
-        arquivo.write(str(listaFatecs))
-
-
-    dfFatec = criarDataFrame(listaFatecs)
-    dfFatec.head()
+    resultado_vestibular_da_fatec = []
+    resultado_vestibular_da_fatec2 = [] #Organiza cada fatec em uma array.
+    demanda_curso()
 
 '''
 

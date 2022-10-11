@@ -124,57 +124,6 @@ def demanda_curso():
         #x = {'fatec':fatec_,'demanda'result:results}
         demanda_por_curso.back()
 
-'''
-lista_info_vestibular_fatec = {
-    'cod_curso':'' ,
-    'nome_curso':'',
-    'cod_instituicao':'',
-    'instituicao':'',
-    'ano':'', 
-    'semestre':'',
-    'periodo':'',
-    'qtde_vagas':'',
-    'qtde_inscrito':'',
-    'demanda':'',
-    'nota_corte':'',
-    'nota_maxima':''
-}
-----------------------------------------------------
-    cod_curso-> Sitema da Calculadora
-    cod_instituicao -> Sistema da Calculadora
-    ano -> ano do vestibular
-    semeste-> semestre do vestibular
-    periodo -> da busca (UPPER())
-    ROBO DEMANDA
-    qtde_vagas-> preencher através de outro robo
-    qtde_inscrito->
-    demanda-> realizar o cálculo
-    nota_corte -> nota min
-    nota_maxima -> nota max
-'''
-
-def resultado_fatec():
-    resultado_tabela = webdriver.Chrome()
-    resultado_tabela.get("https://www.vestibularfatec.com.br/classificacao/lista.asp?codfatec=1&codescolacurso=1999&o=1")
-
-    #tabela_ = resultado_tabela.find_elements_by_css_selector('.table.table-bordered.table-striped')
-    #tabela_ = resultado_tabela.find_element_by_xpath('/html/body/div[2]/div/div[2]/div/div[2]/table')
-
-    #tabela_ = resultado_tabela.find_elements_by_class_name('table')
-
-    tabela_ =resultado_tabela.find_element_by_css_selector('table.table')
-
-    #-Processo para verificar a posição da NOTA e SITUAÇÃO
-    pos_nota = 0
-    pos_situacao = 0
-        
-    for count,cell in enumerate(tabela_.find_elements_by_css_selector('thead th')):
-        print(cell.text,count)
-        if (cell.text =='Situação'):
-            pos_situacao = count
-        if (cell.text =='Nota'):
-            pos_nota = count
-
 def semestre(mes):
     semestre = 2
     if mes <=6:
@@ -191,23 +140,14 @@ def procurar_id_curso_por_nome(df, curso):
     print(x.id)
     return 0
 
-if __name__ == "__main__":
+
+def resultado_fatec(busca_fatec=1):
     #classificacao_geral_vest_fatec = urlListaClassificacaoVestibular('https://www.vestibularfatec.com.br/classificacao/fatec.asp')
-    classificacao_geral_vest_fatec = webdriver.Chrome()
-    classificacao_geral_vest_fatec.get("https://www.vestibularfatec.com.br/classificacao/fatec.asp")
     dfFatec = fatecs()
-   
     dfCursos = cursos()    
-
     resultado_vestibular_da_fatec = []
-    resultado_vestibular_da_fatec2 = [] #Organiza cada fatec em uma array.
-    #demanda_curso()
-    # Criando um dataframe do pandas
-    
-    #df = dfFatec.copy(deep=True)
-    #print(df)
 
-    for i in tqdm(range(len (dfFatec.head(3)))):
+    for i in tqdm(range(busca_fatec)):
         resultado_por_fatec=[]
         id_ = dfFatec.loc[i,'id']
         fatec_ = dfFatec.loc[i,'fatec']
@@ -295,7 +235,32 @@ if __name__ == "__main__":
             
         classificacao_geral_vest_fatec.back()
         time.sleep(1)
-    dfResult =   criarDataFrame(resultado_vestibular_da_fatec)     
-    salvandoDadosVestibularDFtoCSV(dfResult,"resultado")
+    dfResultadoVestibular = criarDataFrame(resultado_vestibular_da_fatec)     
+    salvandoDadosVestibularDFtoCSV(dfResultadoVestibular,f"resultado-vestibularfatec-{semestre(datetime.datetime.now().month)}-{datetime.datetime.now().year}")
+  
 
+if __name__ == "__main__":
+    classificacao_geral_vest_fatec = webdriver.Chrome()
+    classificacao_geral_vest_fatec.get("https://www.vestibularfatec.com.br/classificacao/fatec.asp")    
+    resultado_fatec(6)
+
+    #COMO PREENCHER AS INFORMAÇÕES
+    '''
+    lista_info_vestibular_fatec = {
+        'cod_curso':'' , #-> Sitema da Calculadora
+        'codcurso':'' , #-> -> crawler
+        'nome_curso':'', #-> crawler
+        'cod_fatec':'', #-> crawler
+        'cod_instituicao':'', #-> Sistema da Calculadora
+        'instituicao':'', #-> crawler e Sistema Calculadora Fatec
+        'ano':'', #-> crawler - resultado
+        'semestre':'',#-> crawler - resultado 
+        'periodo':'', #-> crawler - resultado
+        'qtde_vagas':'', #-> crawler -> buscar na demanda
+        'qtde_inscrito':'', #-> crawler -> buscar na demanda
+        'demanda':'', # Sistema da Calculadora -> realizar o cálculo com informações da demanda
+        'nota_corte':'', #-> crawler - resultado -> nota min
+        'nota_maxima':''  #-> crawler - resultado nota max
+    }
+    '''
 

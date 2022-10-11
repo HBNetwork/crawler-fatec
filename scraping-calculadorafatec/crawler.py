@@ -209,7 +209,8 @@ def resultado_fatec(busca_fatec=1):
                     #print(f'#{i+1} - {linha.text}')
     #               lista_info_vestibular_fatec = {}
                     #DENTRO DESSA ITERAÇÃO, TENHO CERTEZA QUE PEGAREI APENAS O CONVOCADO COM OO IF, SEMPRE ATUALIZANDO A NOTA MIN A CADA PASSAGEM. ITERROMPO, QUANDO A CONDIÇÃO DO IF FOR FALSE
-                    if ('CLASSIFICADO' in linha.text.upper()): #or 'CONVOCADO'
+                    if 'CLASSIFICADO' in linha.text.upper(): #or 'CONVOCADO'
+                        #if linha.text.startswith("C"): 
                         nota_min = ajustarNota(linha)
                     else:
                         break            
@@ -236,7 +237,7 @@ def resultado_fatec(busca_fatec=1):
         classificacao_geral_vest_fatec.back()
         time.sleep(1)
     dfResultadoVestibular = criarDataFrame(resultado_vestibular_da_fatec)     
-    salvandoDadosVestibularDFtoCSV(dfResultadoVestibular,f"resultado-vestibularfatec-{semestre(datetime.datetime.now().month)}-{datetime.datetime.now().year}")
+    salvandoDadosVestibularDFtoCSV(dfResultadoVestibular,f"resultado_vestibularfatec_{semestre(datetime.datetime.now().month)}-{datetime.datetime.now().year}")
   
 
 if __name__ == "__main__":

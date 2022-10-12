@@ -32,15 +32,20 @@ def popularSelect(driver, id_Xpath):
     return Select(driver.find_element_by_id(f"{id_Xpath}"))
 
 
-def criarDicionario0():
-    fields = ["id", "fatec"]
-    select_ = Select(classificacao_geral_vest_fatec.find_element(By.ID, "CodFatec"))
-    l = []
-    for option in select_.options[1:]:
-        id_ = int(option.get_attribute("value"))
-        fatec = option.text
-        l.append({"id": id_, "fatec": fatec})
-    return l
+def select_options(select, start=0, stop=None):
+    for option in select.options[slice(start, stop)]:
+        value = option.get_attribute("value")
+        text = option.text
+        yield value, text
+
+
+def lista_todas_as_fatecs(page):
+    select = Select(page.find_element(By.ID, "CodFatec"))
+    yield from select_options(select, start=1)
+
+
+def criarDicionario0(items):
+    return [{"id": int(k), "fatec": v} for k, v in items]
 
 
 def criarDicionario(select_, fields):
@@ -64,7 +69,9 @@ def criarDataFrame(l):
 
 def fatecs():
     # não precisa disso agora.
-    listaFatecs = criarDicionario0()
+    listaFatecs = criarDicionario0(
+        lista_todas_as_fatecs(classificacao_geral_vest_fatec)
+    )
 
     with open(str(Path("ds") / "listafatecs.txt"), "a", encoding="utf-8") as arquivo:
         arquivo.write(str(listaFatecs))

@@ -15,7 +15,7 @@ from pathlib import Path
 BASEDIR = Path.cwd()
 
 # TODO: extract.
-CHROMEDRIVER = "E:\workspace\crawler-fatec\scraping-calculadorafatec\chromedriver.exe"
+CHROMEDRIVER = "path/to/chromedriver.exe"
 
 
 def salvandoDadosVestibularDFtoCSV(df_, nome_arq, path=Path("ds")):

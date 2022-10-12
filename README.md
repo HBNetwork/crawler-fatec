@@ -23,3 +23,4 @@ Um crawler escrito em python para capturar dados dos vestibulares da Fatec (Inst
 ### Versão Grupo 3
 * Crie um ambiente virtual
 * Instala as dependências do requirements-grupo3.txt
+* Definir o path do executável do chromedriver na veriável `CHROMEDRIVER` no arquivo `crawler.py`

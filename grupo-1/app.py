@@ -1,12 +1,13 @@
-import datetime
+from collections import namedtuple
+from datetime import datetime
 from decimal import Decimal
 from pprint import pprint
 
 import requests
 from bs4 import BeautifulSoup
-from collections import namedtuple
 
-
+# só assim eu consegui mockar o now para testar a função get_ano_semestre
+now = datetime.now
 
 
 Fatec = namedtuple("Fatec", ["id", "nome"])
@@ -42,12 +43,13 @@ def make_table():
     ano_sem = f"{ano}{semestre}"
     id_cursos = get_id_cursos()
     for fatec in fatecs:
-        print(fatec.nome)
+        print(fatec)
         demandas = get_demandas_curso(fatec.nome, ano_sem)
 
         cursos = join_id_cursos(id_cursos, get_cursos(fatec.id))
 
         for curso in cursos:
+            print(curso)
             vagas = None
             inscritos = None
             demanda = None
@@ -60,7 +62,9 @@ def make_table():
                     inscritos = demanda.inscritos
                     demanda = demanda.demanda
                     break
-            classificacao = get_maior_menor(get_classificados(fatec.id, curso.id_interno))
+            classificacao = get_maior_menor(
+                get_classificados(fatec.id, curso.id_interno)
+            )
             rows.append(
                 Resultado(
                     curso.id,
@@ -82,13 +86,19 @@ def join_id_cursos(id_cursos, cursos):
     cursos_id_correto = []
     for curso in cursos:
         cursos_id_correto.append(
-            Curso(id_cursos[curso.nome], curso.id_interno, curso.nome, curso.periodo, curso.id_fatec)
+            Curso(
+                id_cursos[curso.nome],
+                curso.id_interno,
+                curso.nome,
+                curso.periodo,
+                curso.id_fatec,
+            )
         )
     return cursos_id_correto
 
 
 def get_ano_semestre():
-    date_now = datetime.datetime.now()
+    date_now = now()
     semestre = 1 if date_now.month <= 6 else 2
     ano = date_now.year
     return ano, semestre
@@ -154,6 +164,9 @@ def get_classificados(id_fatec, id_curso, opcao=1):
 
 
 def get_maior_menor(classificados):
+    """
+    A lista de classificação precisa esttar ordenada
+    """
     return MaiorMenorNota(classificados[0].nota, classificados[-1].nota)
 
 

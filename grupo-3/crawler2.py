@@ -11,6 +11,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 import time
 from tqdm import tqdm
 from pathlib import Path
+from selenium.common.exceptions import NoSuchElementException
+
 
 BASEDIR = Path.cwd()
 
@@ -239,9 +241,7 @@ def resultado_fatec(busca_fatec=1):
                 )     
                 time.sleep(5)
                 # SELECIONO A TABELA COM O RESULTADO
-                if classificacao_geral_vest_fatec.find_element(
-                    By.CSS_SELECTOR, "table.table"
-                ).size !=0:
+                try:
                     tabela_ = classificacao_geral_vest_fatec.find_element(
                         By.CSS_SELECTOR, "table.table"
                     )
@@ -266,10 +266,10 @@ def resultado_fatec(busca_fatec=1):
                             # if linha.text.startswith("C"):
                             nota_min = ajustarNota(linha)
                         else:
-                            break
-                    else: # Registro não encontrado.
-                        nota_max = 0
-                        nota_min = 0
+                            break                    
+                except NoSuchElementException:  #spelling error making this code not work as expected
+                    nota_max = 0
+                    nota_min = 0
                 print(f"NOTA MÁXIMA = {nota_max} | NOTA DE CORTE = {nota_min}")
                 lista_info_vestibular_fatec = {}
                 # NESTA ETAPA JÁ POSSUO OS DADOS PARA CRIAR UM OBJETO COMOS RESULTADOS DESTE CURSO, PERIODO E DESTA FATEC

@@ -194,7 +194,7 @@ def resultado_fatec(busca_fatec=1):
     dfCursos = cursos()
     resultado_vestibular_da_fatec = []
 
-    for i in tqdm(range(busca_fatec)):
+    for i in tqdm(range(len(dfFatec))):
         resultado_por_fatec = []
         id_ = dfFatec.loc[i, "id"]
         fatec_ = dfFatec.loc[i, "fatec"]
@@ -328,7 +328,7 @@ if __name__ == "__main__":
     classificacao_geral_vest_fatec.get(
         "https://www.vestibularfatec.com.br/classificacao/fatec.asp"
     )
-    resultado_fatec(10)
+    resultado_fatec()
 
     # COMO PREENCHER AS INFORMAÇÕES
     """

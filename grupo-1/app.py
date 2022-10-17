@@ -181,20 +181,21 @@ def get_demandas_curso(nome_fatec, id_semestre):
     )
 
     soup = BeautifulSoup(resp.content, "html.parser")
-
-    for linha in soup.find_all("tr")[1:]:
-        colunas = linha.find_all("td")
-        demanda = Decimal(colunas[4].text.replace(",", "."))
-        demandas.append(
-            Demanda(
-                colunas[0].text,
-                colunas[1].text,
-                int(colunas[2].text),
-                int(colunas[3].text),
-                demanda,
-                nome_fatec,
+    cursos = soup.find_all("tr")
+    if cursos:
+        for linha in cursos[1:]:
+            colunas = linha.find_all("td")
+            demanda = Decimal(colunas[4].text.replace(",", "."))
+            demandas.append(
+                Demanda(
+                    colunas[0].text,
+                    colunas[1].text,
+                    int(colunas[2].text),
+                    int(colunas[3].text),
+                    demanda,
+                    nome_fatec,
+                )
             )
-        )
 
     return demandas
 

@@ -1,10 +1,15 @@
 from collections import namedtuple
 from datetime import datetime
 from decimal import Decimal
+from itertools import chain
+from pdb import set_trace
 from pprint import pprint
-
+from multiprocessing import Pool
+import time
+from tkinter.ttk import Separator
 import requests
 from bs4 import BeautifulSoup
+import csv
 
 # só assim eu consegui mockar o now para testar a função get_ano_semestre
 now = datetime.now
@@ -12,18 +17,34 @@ now = datetime.now
 
 Fatec = namedtuple("Fatec", ["id", "nome"])
 MaiorMenorNota = namedtuple("MaiorMenorNota", ["maior", "menor"])
-Curso = namedtuple("Curso", ["id", "id_interno", "nome", "periodo", "id_fatec"])
 Classificado = namedtuple(
     "Classificado", ["classificacao", "nota", "id_fatec", "id_curso"]
 )
-Demanda = namedtuple(
-    "Demanda", ["nome_curso", "periodo", "inscritos", "vagas", "demanda", "nome_fatec"]
-)
-Resultado = namedtuple(
-    "Resultado",
+Curso = namedtuple(
+    "Curso",
     [
+        "id",
+        "id_interno",
+        "id_fatec",
+        "nome",
+        "ano_sem",
+        "periodo",
+        "qtde_vagas",
+        "qtde_inscrito",
+        "demanda",
+        "maior_nota",
+        "menor_nota",
+        "nome_fatec",
+    ],
+)
+
+def write_table(resultado):
+    with open('resultado.csv', 'w', newline='') as f:
+        field_names = [
         "cod_curso",
+        "nome_curso",
         "cod_instituicao",
+        "nome_instituicao"
         "ano",
         "semestre",
         "periodo",
@@ -32,55 +53,47 @@ Resultado = namedtuple(
         "demanda",
         "nota_corte",
         "nota_maxima",
-    ],
-)
-# Campos da tabela
-# cod_curso,cod_instituicao,ano,semestre,periodo,qtde_vagas,qtde_inscrito,demanda,nota_corte,nota_maxima
+        ]
+
+        writer = csv.writer(f, delimiter=';')
+        writer.writerow(field_names)
+        writer.writerows(resultado)
+
 def make_table():
-    rows = []
+
     fatecs = get_fatecs()
     ano, semestre = get_ano_semestre()
     ano_sem = f"{ano}{semestre}"
     id_cursos = get_id_cursos()
-    for fatec in fatecs:
-        print(fatec)
-        demandas = get_demandas_curso(fatec.nome, ano_sem)
+    with Pool(20) as pool:
+        inicio = time.time()
+        cursos = pool.starmap(get_cursos, [(fatec.id, fatec.nome, ano_sem) for fatec in fatecs])
+        cursos = join_id_cursos(id_cursos, chain(*cursos))
+        resultado = get_resultados(cursos)
+        print(f'DURAÇÃO -> {time.time() - inicio} seg')
+    write_table(resultado)
+    return resultado
 
-        cursos = join_id_cursos(id_cursos, get_cursos(fatec.id))
-
-        for curso in cursos:
-            print(curso)
-            vagas = None
-            inscritos = None
-            demanda = None
-            for demanda in demandas:
-                if (
-                    demanda.nome_curso == curso.nome
-                    and demanda.periodo == curso.periodo
-                ):
-                    vagas = demanda.vagas
-                    inscritos = demanda.inscritos
-                    demanda = demanda.demanda
-                    break
-            classificacao = get_maior_menor(
-                get_classificados(fatec.id, curso.id_interno)
-            )
-            rows.append(
-                Resultado(
-                    curso.id,
-                    fatec.id,
-                    ano,
-                    semestre,
-                    curso.periodo,
-                    vagas,
-                    inscritos,
-                    demanda,
-                    classificacao.menor,
-                    classificacao.maior,
-                )
-            )
-    return rows
-
+def get_resultados(cursos):
+    resultado = []
+    ano = cursos[0].ano_sem[:-1]
+    semestre = cursos[0].ano_sem[-1:]
+    for curso in cursos:
+        resultado.append((
+            curso.id,
+            curso.nome,
+            curso.id_fatec,
+            curso.nome_fatec,
+            ano,
+            semestre,
+            curso.periodo,
+            curso.qtde_vagas,
+            curso.qtde_inscrito,
+            curso.demanda,
+            curso.menor_nota,
+            curso.maior_nota
+        ))
+    return resultado
 
 def join_id_cursos(id_cursos, cursos):
     cursos_id_correto = []
@@ -89,9 +102,16 @@ def join_id_cursos(id_cursos, cursos):
             Curso(
                 id_cursos[curso.nome],
                 curso.id_interno,
-                curso.nome,
-                curso.periodo,
                 curso.id_fatec,
+                curso.nome,
+                curso.ano_sem,
+                curso.periodo,
+                curso.qtde_vagas,
+                curso.qtde_inscrito,
+                curso.demanda,
+                curso.maior_nota,
+                curso.menor_nota,
+                curso.nome_fatec
             )
         )
     return cursos_id_correto
@@ -106,7 +126,7 @@ def get_ano_semestre():
 
 def extrai_nome_periodo(nome_com_periodo):
     nome, periodo = (nome_com_periodo.replace(")", "")).split("(")
-    return nome.strip(), periodo
+    return nome.strip(), periodo.strip()
 
 
 def extrai_nome_fatec(nome_com_cidade):
@@ -124,19 +144,48 @@ def get_fatecs():
     return fatecs
 
 
-def get_cursos(id_fatec):
+def get_cursos(id_fatec, nome_fatec, ano_sem):
     cursos = []
     data = {"CodFatec": id_fatec}
-
     resp = requests.post(
         "https://www.vestibularfatec.com.br/classificacao/lista.asp", data=data
     )
-
+    demandas_lista = get_demandas_curso(nome_fatec, ano_sem)
     soup = BeautifulSoup(resp.content, "html.parser")
+    cursos_soup = soup.find_all("option")
+    if cursos_soup:
 
-    for option in soup.find_all("option")[1:]:
-        nome, periodo = extrai_nome_periodo(option.text)
-        cursos.append(Curso(None, int(option["value"]), nome, periodo, id_fatec))
+        for option in cursos_soup[1:]:
+            id_curso = int(option["value"])
+            nome, periodo = extrai_nome_periodo(option.text)
+            classificacao = get_classificados(id_fatec, id_curso)
+            nota = get_maior_menor(classificacao)
+            demandas = demandas_lista.get((nome, periodo))
+            #TODO: Adicionar notificação caso não exista demanda
+            vagas = 0
+            inscritos = 0 
+            demanda = 0
+            if demandas:
+                vagas = demandas['vagas']
+                inscritos = demandas['inscritos']
+                demanda = demandas['demanda']
+
+            cursos.append(
+                Curso(
+                    None,
+                    id_curso,
+                    id_fatec,
+                    nome,
+                    ano_sem,
+                    periodo,
+                    vagas,
+                    inscritos,
+                    demanda,
+                    nota.maior,
+                    nota.menor,
+                    nome_fatec,
+                )
+            )
 
     return cursos
 
@@ -152,13 +201,15 @@ def get_classificados(id_fatec, id_curso, opcao=1):
     )
 
     soup = BeautifulSoup(resp.content, "html.parser")
-    for linha in soup.find_all("tr")[1:]:
-        colunas = linha.find_all("td")
-        if colunas[-1].text == "CLASSIFICADO":
-            nota = Decimal(colunas[3].text.replace(",", "."))
-            classificados.append(
-                Classificado(int(colunas[0].text), nota, id_fatec, id_curso)
-            )
+    classificados_soup = soup.find_all("tr")
+    if classificados_soup:
+        for linha in classificados_soup[1:]:
+            colunas = linha.find_all("td")
+            if colunas[-1].text == "CLASSIFICADO":
+                nota = Decimal(colunas[3].text.replace(",", "."))
+                classificados.append(
+                    Classificado(int(colunas[0].text), nota, id_fatec, id_curso)
+                )
 
     return classificados
 
@@ -167,11 +218,17 @@ def get_maior_menor(classificados):
     """
     A lista de classificação precisa esttar ordenada
     """
-    return MaiorMenorNota(classificados[0].nota, classificados[-1].nota)
+    maior_nota = 0
+    menor_nota = 0
+    if classificados:
+        maior_nota = classificados[0].nota
+        menor_nota = classificados[-1].nota
+
+    return MaiorMenorNota(maior_nota, menor_nota)
 
 
 def get_demandas_curso(nome_fatec, id_semestre):
-    demandas = []
+    demandas = {}
     data = {
         "FATEC": nome_fatec,
         "ano-sem": id_semestre,
@@ -186,17 +243,15 @@ def get_demandas_curso(nome_fatec, id_semestre):
         for linha in cursos[1:]:
             colunas = linha.find_all("td")
             demanda = Decimal(colunas[4].text.replace(",", "."))
-            demandas.append(
-                Demanda(
-                    colunas[0].text,
-                    colunas[1].text,
-                    int(colunas[2].text),
-                    int(colunas[3].text),
-                    demanda,
-                    nome_fatec,
-                )
-            )
-
+            nome_curso = colunas[0].text
+            periodo = colunas[1].text
+            inscritos = int(colunas[2].text)
+            vagas = int(colunas[3].text)
+            demandas[(nome_curso.strip(), periodo.strip())] = {
+                "inscritos": inscritos,
+                "vagas": vagas,
+                "demanda": demanda,
+            }
     return demandas
 
 
@@ -215,31 +270,6 @@ def get_id_cursos():
 
 
 if "__main__" == __name__:
-    # fatecs = get_fatecs()
-    # print([x.nome for x in fatecs])
-    # cursos = get_id_cursos()
-    # pprint(cursos)
 
-    table = make_table()
-    pprint(table)
-
-    # cursos = get_cursos(71)
-    # print(cursos)
-    # classificados = get_classificados(1, 1999)
-    # pprint(classificados)
-    # maior_menor = get_maior_menor(
-    #     [
-    #         Classificado(
-    #             classificacao="1", nota=Decimal("100"), id_fatec=1, id_curso=1999
-    #         ),
-    #         Classificado(
-    #             classificacao="2", nota=Decimal("99"), id_fatec=1, id_curso=1999
-    #         ),
-    #         Classificado(
-    #             classificacao="3", nota=Decimal("98"), id_fatec=1, id_curso=1999
-    #         ),
-    #     ]
-    # )
-    # pprint(maior_menor)
-    # demandas = get_demandas_curso("Fatec Adamantina", "20222")
-    # pprint(demandas)
+    cursos = make_table()
+    pprint('cursos quantidade -> ', len(cursos))

@@ -1,10 +1,11 @@
 from requests_futures.sessions import FuturesSession
 from bs4 import BeautifulSoup
 from datetime import datetime
+import time
 
 now = datetime.now
-
-
+all_resps = []
+# UTILS
 def extrai_nome_fatec(nome_com_cidade):
     return "-".join(nome_com_cidade.split("-")[1:]).strip()
 
@@ -16,6 +17,7 @@ def get_ano_semestre():
     return f"{ano}-{semestre}"
 
 
+# PREPARAÇÕES
 def prepara_demanda_classificacao(content):
     # TODO SEPARAR
     # TODO Utilizar CSS Selector
@@ -41,67 +43,61 @@ def prepara_demanda_classificacao(content):
                 "hook": response_hook_demandas,
             }
         )
-
-    print(len(lista_fatecs))
     return lista_fatecs
+
 
 def prepara_curso(content, id_fatec):
     # TODO SEPARAR
     # TODO Utilizar CSS Selector
-    classificados = []
+    cursos = []
+    soup = BeautifulSoup(content, "html.parser")
+    cursos_soup = soup.find_all("option")
+    if cursos_soup:
+        for option in cursos_soup[1:]:
+            id_curso = int(option["value"])
+            cursos.append(
+                {
+                    "url": "https://www.vestibularfatec.com.br/classificacao/lista.asp",
+                    "data": {"CodFatec": id_fatec, "CodEscolaCurso": id_curso, "o": 1},
+                    "hook": response_hook_classificacao,
+                }
+            )
 
-    data = {"CodFatec": id_fatec}
+    return cursos
 
-    resp = requests.post(
-        "https://www.vestibularfatec.com.br/classificacao/lista.asp", data=data
-    )
 
-    soup = BeautifulSoup(resp.content, "html.parser")
-    classificados_soup = soup.find_all("tr")
-    if classificados_soup:
-        for linha in classificados_soup[1:]:
-            colunas = linha.find_all("td")
-            if colunas[-1].text == "CLASSIFICADO":
-                nota = Decimal(colunas[3].text.replace(",", "."))
-                classificados.append(
-                    {
-                        'url': 'https://www.vestibularfatec.com.br/classificacao/lista.asp',
-                        'data': {"CodFatec": id_fatec, "CodEscolaCurso": id_curso, "o": 1}
-
-                    }
-                    # Classificado(int(colunas[0].text), nota, id_fatec, id_curso)
-                )
-
-    return classificados
-
+# HOOKS
 def response_hook_fatec(resp, *args, **kwargs):
-    print("FATEC ", resp.status_code, resp.url)
     lista_fatecs = prepara_demanda_classificacao(resp.content)
-    response_for_urls(lista_fatecs[:1])
+    response_for_urls(lista_fatecs)
+
+
+def response_hook_id_cursos(resp, *args, **kwargs):
+    all_resps.append(resp)
 
 
 def response_hook_cursos(resp, *args, **kwargs):
+    id_fatec = resp.request.body.split("=")[1]
+    list_cursos = prepara_curso(resp.content, id_fatec)
+    response_for_urls(list_cursos)
 
-    id_fatec = resp.request.body.split('=')[1]
-    print("CURSOS ", resp.status_code, resp.url)
-    list_cursos = prepara_classificacao(resp.content, id_fatec)
 
+def response_hook_classificacao(resp, *args, **kwargs):
+    all_resps.append(resp)
 
 
 def response_hook_demandas(resp, *args, **kwargs):
-    print("DEMANDAS ", resp.status_code, resp.url)
-    # response_for_urls(demandas)
+    all_resps.append(resp)
 
-
+# REQUESTS
 def response_for_urls(urls):
     """Asynchronously get response for many urls."""
     # TODO Da para usar a sessão ou context name para tratar errors HTTP?
-    with FuturesSession() as session:
+    # TODO Estamos recebendo um valor diferente do total de requisições a cada execução
+    with FuturesSession(max_workers=75) as session:
         futures = [
             session.post(
-                url["url"],
-                data=url.get("data"),
-                hooks={"response": url.get("hook")},
+                url["url"], data=url.get("data"), hooks={"response": url.get("hook")}
             )
             for url in urls
         ]
@@ -117,6 +113,7 @@ def main_fatec():
 
 
 if __name__ == "__main__":
+    start = time.time()
     urls = [
         {
             "url": "https://www.vestibularfatec.com.br/classificacao/fatec.asp",
@@ -124,8 +121,10 @@ if __name__ == "__main__":
         },
         {
             "url": "https://www.vestibularfatec.com.br/unidades-cursos/",
-            "hook": response_hook_cursos,
+            "hook": response_hook_id_cursos,
         },
     ]
 
     print(list(response_for_urls(urls)))
+    print(f'DURAÇÃO: {time.time() - start} segundos')
+    print(len(all_resps))

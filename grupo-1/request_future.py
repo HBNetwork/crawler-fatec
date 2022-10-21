@@ -74,7 +74,7 @@ def response_hook_fatec(resp, *args, **kwargs):
 
 def response_hook_id_cursos(resp, *args, **kwargs):
     all_resps.append(resp)
-
+    #TODO add parser
 
 def response_hook_cursos(resp, *args, **kwargs):
     id_fatec = resp.request.body.split("=")[1]
@@ -83,17 +83,19 @@ def response_hook_cursos(resp, *args, **kwargs):
 
 
 def response_hook_classificacao(resp, *args, **kwargs):
+    #TODO add parser
     all_resps.append(resp)
 
 
 def response_hook_demandas(resp, *args, **kwargs):
+    #TODO add parser
     all_resps.append(resp)
 
 # REQUESTS
 def response_for_urls(urls):
     """Asynchronously get response for many urls."""
     # TODO Da para usar a sessão ou context name para tratar errors HTTP?
-    # TODO Estamos recebendo um valor diferente do total de requisições a cada execução
+    resp = None
     with FuturesSession(max_workers=75) as session:
         futures = [
             session.post(
@@ -101,8 +103,10 @@ def response_for_urls(urls):
             )
             for url in urls
         ]
+        resp = [f.result() for f in futures] 
 
-    return (f.result() for f in futures)
+    return resp
+    # return (f.result() for f in futures)
 
 
 def main_fatec():

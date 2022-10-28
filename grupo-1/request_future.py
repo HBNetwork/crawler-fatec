@@ -92,9 +92,12 @@ def response_hook_demandas(resp, *args, **kwargs):
     all_resps.append(resp)
 
 # REQUESTS
-def response_for_urls(urls):
+def response_for_urls(urls): #Trocar nome do parametro
     """Asynchronously get response for many urls."""
     # TODO Da para usar a sessão ou context name para tratar errors HTTP?
+    # 1.Configura session.
+    # 2.Mapeia/inicializa.
+    # 3.blockeia aguardando a conclusão de todas elas.
     resp = None
     with FuturesSession(max_workers=75) as session:
         futures = [

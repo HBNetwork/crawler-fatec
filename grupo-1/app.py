@@ -39,7 +39,7 @@ Curso = namedtuple(
 )
 
 def write_table(resultado):
-    with open('resultado.csv', 'w', newline='') as f:
+    with open('resultado.csv', 'w', newline='', encoding="utf-8" ) as f:
         field_names = [
         "cod_curso",
         "nome_curso",
@@ -272,4 +272,4 @@ def get_id_cursos():
 if "__main__" == __name__:
 
     cursos = make_table()
-    pprint('cursos quantidade -> ', len(cursos))
+    print('cursos quantidade -> ', len(cursos))

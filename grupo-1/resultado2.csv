@@ -1,0 +1,460 @@
+cod_curso;nome_curso;cod_instituicao;nome_instituicaoano;semestre;periodo;qtde_vagas;qtde_inscrito;demanda;nota_corte;nota_maxima
+270;Ciência de Dados;71;Fatec Adamantina;2022;2;Noite;35;57;1.63;25.143;85.250
+186;Gestão Comercial;71;Fatec Adamantina;2022;2;Noite;35;60;1.71;44.000;77.970
+194;Análise e Desenvolvimento de Sistemas;3;Fatec Americana - Ministro Ralph Biasi;2022;2;Tarde;40;79;1.98;57.750;92.400
+194;Análise e Desenvolvimento de Sistemas;3;Fatec Americana - Ministro Ralph Biasi;2022;2;Manhã;40;172;4.30;70.125;90.200
+260;Design de Moda;3;Fatec Americana - Ministro Ralph Biasi;2022;2;Manhã;40;67;1.68;50.000;81.675
+245;Gestão Empresarial;3;Fatec Americana - Ministro Ralph Biasi;2022;2;Manhã;40;62;1.55;39.000;87.010
+245;Gestão Empresarial;3;Fatec Americana - Ministro Ralph Biasi;2022;2;Noite;40;180;4.50;64.750;90.750
+245;Gestão Empresarial;3;Fatec Americana - Ministro Ralph Biasi;2022;2;EaD;20;150;7.50;77.250;94.355
+199;Jogos Digitais;3;Fatec Americana - Ministro Ralph Biasi;2022;2;Noite;40;74;1.85;61.020;93.000
+179;Logística;3;Fatec Americana - Ministro Ralph Biasi;2022;2;Manhã;40;54;1.35;43.250;86.750
+179;Logística;3;Fatec Americana - Ministro Ralph Biasi;2022;2;Noite;40;107;2.68;59.125;95.203
+192;Produção Têxtil;3;Fatec Americana - Ministro Ralph Biasi;2022;2;Noite;40;68;1.70;41.250;80.575
+198;Segurança da Informação;3;Fatec Americana - Ministro Ralph Biasi;2022;2;Manhã;40;82;2.05;52.800;93.500
+198;Segurança da Informação;3;Fatec Americana - Ministro Ralph Biasi;2022;2;Noite;40;189;4.73;70.562;94.920
+194;Análise e Desenvolvimento de Sistemas;35;Fatec Araçatuba - Prof. Fernando Amaral de Almeida Prado;2022;2;Manhã;40;96;2.40;60.500;100.000
+125;Biocombustíveis;35;Fatec Araçatuba - Prof. Fernando Amaral de Almeida Prado;2022;2;Noite;40;64;1.60;33.550;85.525
+245;Gestão Empresarial;35;Fatec Araçatuba - Prof. Fernando Amaral de Almeida Prado;2022;2;EaD;20;67;3.35;64.000;91.850
+186;Gestão Comercial;67;Fatec Araraquara;2022;2;Noite;40;80;2.00;52.545;77.688
+245;Gestão Empresarial;67;Fatec Araraquara;2022;2;Manhã;40;45;1.13;29.975;88.500
+198;Segurança da Informação;67;Fatec Araraquara;2022;2;Noite;40;168;4.20;66.275;92.125
+275;Desenvolvimento de Software Multiplataforma;68;Fatec Araras;2022;2;Noite;40;84;2.10;57.750;84.000
+245;Gestão Empresarial;68;Fatec Araras;2022;2;Noite;40;77;1.93;52.250;83.325
+186;Gestão Comercial;61;Fatec Assis;2022;2;Noite;40;78;1.95;53.675;83.050
+97;Gestão da Tecnologia da Informação;61;Fatec Assis;2022;2;Noite;40;98;2.45;54.450;89.650
+277;Gestão Hospitalar;74;Fatec Barretos;2022;2;Noite;40;76;1.90;45.750;80.250
+274;Comércio Exterior;47;Fatec Barueri - Padre Danilo José de Oliveira Ohl;2022;2;Tarde;40;55;1.38;38.420;92.675
+274;Comércio Exterior;47;Fatec Barueri - Padre Danilo José de Oliveira Ohl;2022;2;Noite;40;204;5.10;69.575;89.100
+265;Design de Mídias Digitais;47;Fatec Barueri - Padre Danilo José de Oliveira Ohl;2022;2;Noite;40;239;5.98;71.000;92.125
+163;Eventos;47;Fatec Barueri - Padre Danilo José de Oliveira Ohl;2022;2;Manhã;40;51;1.28;32.960;80.575
+97;Gestão da Tecnologia da Informação;47;Fatec Barueri - Padre Danilo José de Oliveira Ohl;2022;2;Manhã;40;233;5.83;65.725;83.903
+224;Gestão de Recursos Humanos;47;Fatec Barueri - Padre Danilo José de Oliveira Ohl;2022;2;Manhã;40;144;3.60;58.850;94.050
+245;Gestão Empresarial;47;Fatec Barueri - Padre Danilo José de Oliveira Ohl;2022;2;EaD;20;281;14.05;74.298;93.790
+179;Logística;47;Fatec Barueri - Padre Danilo José de Oliveira Ohl;2022;2;Tarde;40;44;1.10;35.030;82.250
+218;Transporte Terrestre;47;Fatec Barueri - Padre Danilo José de Oliveira Ohl;2022;2;Noite;40;58;1.45;22.825;79.475
+92;Automação Industrial;40;Fatec Bauru;2022;2;Noite;40;121;3.03;62.216;89.095
+221;Banco de Dados;40;Fatec Bauru;2022;2;Noite;40;205;5.13;71.585;95.768
+245;Gestão Empresarial;40;Fatec Bauru;2022;2;EaD;20;148;7.40;70.950;88.275
+277;Gestão Hospitalar;40;Fatec Bauru;2022;2;Manhã;40;62;1.55;33.053;79.200
+222;Redes de Computadores;40;Fatec Bauru;2022;2;Manhã;40;60;1.50;48.002;95.425
+115;Sistemas Biomédicos;40;Fatec Bauru;2022;2;Manhã;0;0;0;0;0
+115;Sistemas Biomédicos;40;Fatec Bauru;2022;2;Noite;40;60;1.50;46.750;97.900
+262;Big Data no Agronegócio;62;Fatec Bebedouro - Jorge Caram Sabbag;2022;2;Noite;40;58;1.45;42.350;95.150
+179;Logística;62;Fatec Bebedouro - Jorge Caram Sabbag;2022;2;Noite;40;58;1.45;32.703;78.375
+75;Agronegócio;13;Fatec Botucatu;2022;2;Noite;40;68;1.70;47.300;85.250
+194;Análise e Desenvolvimento de Sistemas;13;Fatec Botucatu;2022;2;Manhã;40;55;1.38;30.525;83.325
+194;Análise e Desenvolvimento de Sistemas;13;Fatec Botucatu;2022;2;Noite;40;112;2.80;61.028;100.000
+245;Gestão Empresarial;13;Fatec Botucatu;2022;2;EaD;20;126;6.30;69.025;83.875
+179;Logística;13;Fatec Botucatu;2022;2;Noite;40;67;1.68;48.400;76.175
+217;Produção Industrial;13;Fatec Botucatu;2022;2;Noite;40;70;1.75;48.125;91.025
+164;Radiologia;13;Fatec Botucatu;2022;2;Noite;40;98;2.45;49.500;76.500
+194;Análise e Desenvolvimento de Sistemas;41;Fatec Bragança Paulista - Jornalista Omair Fagundes de Oliveira;2022;2;Manhã;40;78;1.95;56.375;92.400
+97;Gestão da Tecnologia da Informação;41;Fatec Bragança Paulista - Jornalista Omair Fagundes de Oliveira;2022;2;Noite;40;97;2.43;54.175;89.375
+245;Gestão Empresarial;41;Fatec Bragança Paulista - Jornalista Omair Fagundes de Oliveira;2022;2;Manhã;40;42;1.05;31.290;81.125
+245;Gestão Empresarial;41;Fatec Bragança Paulista - Jornalista Omair Fagundes de Oliveira;2022;2;EaD;20;96;4.80;65.175;87.175
+187;Gestão Financeira;41;Fatec Bragança Paulista - Jornalista Omair Fagundes de Oliveira;2022;2;Noite;40;65;1.63;47.460;73.250
+179;Logística;41;Fatec Bragança Paulista - Jornalista Omair Fagundes de Oliveira;2022;2;Noite;40;71;1.78;40.150;76.450
+194;Análise e Desenvolvimento de Sistemas;60;Fatec Campinas;2022;2;Manhã;40;263;6.58;76.250;100.000
+97;Gestão da Tecnologia da Informação;60;Fatec Campinas;2022;2;Noite;40;203;5.08;70.500;97.900
+264;Gestão de Energia e Eficiência Energética;60;Fatec Campinas;2022;2;Noite;40;96;2.40;57.200;100.000
+245;Gestão Empresarial;60;Fatec Campinas;2022;2;Manhã;40;69;1.73;49.500;89.925
+225;Processos Químicos;60;Fatec Campinas;2022;2;Noite;40;126;3.15;68.930;93.500
+225;Processos Químicos;60;Fatec Campinas;2022;2;Manhã;40;59;1.48;47.300;99.275
+247;Agroindústria;34;Fatec Capão Bonito;2022;2;Manhã;40;63;1.58;27.225;87.750
+245;Gestão Empresarial;34;Fatec Capão Bonito;2022;2;EaD;20;49;2.45;55.825;84.150
+127;Silvicultura;34;Fatec Capão Bonito;2022;2;Noite;40;66;1.65;36.025;88.550
+194;Análise e Desenvolvimento de Sistemas;23;Fatec Carapicuíba;2022;2;Manhã;40;288;7.20;73.450;89.100
+194;Análise e Desenvolvimento de Sistemas;23;Fatec Carapicuíba;2022;2;Noite;40;709;17.73;78.925;96.333
+265;Design de Mídias Digitais;23;Fatec Carapicuíba;2022;2;Manhã;40;105;2.63;58.195;91.530
+245;Gestão Empresarial;23;Fatec Carapicuíba;2022;2;EaD;20;214;10.70;73.150;97.075
+199;Jogos Digitais;23;Fatec Carapicuíba;2022;2;Manhã;40;50;1.25;44.200;83.600
+199;Jogos Digitais;23;Fatec Carapicuíba;2022;2;Noite;40;62;1.55;47.500;77.825
+179;Logística;23;Fatec Carapicuíba;2022;2;Manhã;40;82;2.05;47.750;95.975
+179;Logística;23;Fatec Carapicuíba;2022;2;Noite;40;174;4.35;61.500;90.118
+165;Secretariado;23;Fatec Carapicuíba;2022;2;Noite;40;66;1.65;46.250;100.000
+92;Automação Industrial;42;Fatec Catanduva;2022;2;Noite;40;77;1.93;46.200;89.250
+97;Gestão da Tecnologia da Informação;42;Fatec Catanduva;2022;2;Noite;40;115;2.88;60.250;89.650
+245;Gestão Empresarial;42;Fatec Catanduva;2022;2;Manhã;40;53;1.33;29.150;76.450
+245;Gestão Empresarial;42;Fatec Catanduva;2022;2;Noite;40;112;2.80;61.585;100.000
+270;Ciência de Dados;58;Fatec Cotia;2022;2;Noite;40;134;3.35;63.800;97.625
+275;Desenvolvimento de Software Multiplataforma;58;Fatec Cotia;2022;2;Noite;40;190;4.75;70.950;96.800
+94;Gestão da Produção Industrial;58;Fatec Cotia;2022;2;Manhã;40;69;1.73;26.555;81.925
+94;Gestão da Produção Industrial;58;Fatec Cotia;2022;2;Noite;40;108;2.70;52.263;71.500
+245;Gestão Empresarial;58;Fatec Cotia;2022;2;Manhã;40;74;1.85;49.500;78.795
+245;Gestão Empresarial;58;Fatec Cotia;2022;2;Noite;40;157;3.93;62.998;93.790
+194;Análise e Desenvolvimento de Sistemas;19;Fatec Cruzeiro - Prof. Waldomiro May;2022;2;Manhã;40;101;2.53;60.775;90.475
+163;Eventos;19;Fatec Cruzeiro - Prof. Waldomiro May;2022;2;Noite;40;38;0.95;26.675;74.863
+94;Gestão da Produção Industrial;19;Fatec Cruzeiro - Prof. Waldomiro May;2022;2;Noite;40;122;3.05;55.295;89.100
+245;Gestão Empresarial;19;Fatec Cruzeiro - Prof. Waldomiro May;2022;2;EaD;20;87;4.35;64.075;90.475
+245;Gestão Empresarial;19;Fatec Cruzeiro - Prof. Waldomiro May;2022;2;Tarde;40;72;1.80;46.250;89.500
+248;Cosméticos;54;Fatec Diadema - Luigi Papaiz;2022;2;Manhã;40;51;1.28;33.618;89.650
+248;Cosméticos;54;Fatec Diadema - Luigi Papaiz;2022;2;Noite;40;73;1.83;50.568;91.300
+275;Desenvolvimento de Software Multiplataforma;54;Fatec Diadema - Luigi Papaiz;2022;2;Manhã;40;90;2.25;57.200;89.375
+94;Gestão da Produção Industrial;54;Fatec Diadema - Luigi Papaiz;2022;2;Noite;40;120;3.00;56.500;88.275
+194;Análise e Desenvolvimento de Sistemas;69;Fatec Ferraz de Vasconcelos;2022;2;Manhã;40;152;3.80;66.953;83.875
+94;Gestão da Produção Industrial;69;Fatec Ferraz de Vasconcelos;2022;2;Noite;40;71;1.78;48.308;88.550
+194;Análise e Desenvolvimento de Sistemas;43;Fatec Franca - Dr. Thomaz Novelino;2022;2;Manhã;40;109;2.73;64.625;95.150
+194;Análise e Desenvolvimento de Sistemas;43;Fatec Franca - Dr. Thomaz Novelino;2022;2;Noite;40;336;8.40;75.075;95.150
+275;Desenvolvimento de Software Multiplataforma;43;Fatec Franca - Dr. Thomaz Novelino;2022;2;Noite;40;150;3.75;72.600;92.950
+94;Gestão da Produção Industrial;43;Fatec Franca - Dr. Thomaz Novelino;2022;2;Noite;40;70;1.75;48.025;86.445
+94;Gestão da Produção Industrial;43;Fatec Franca - Dr. Thomaz Novelino;2022;2;Manhã;40;60;1.50;33.990;80.025
+224;Gestão de Recursos Humanos;43;Fatec Franca - Dr. Thomaz Novelino;2022;2;Noite;40;110;2.75;55.825;96.250
+224;Gestão de Recursos Humanos;43;Fatec Franca - Dr. Thomaz Novelino;2022;2;Manhã;40;65;1.63;37.927;89.250
+245;Gestão Empresarial;43;Fatec Franca - Dr. Thomaz Novelino;2022;2;EaD;20;117;5.85;70.675;88.550
+97;Gestão da Tecnologia da Informação;70;Fatec Franco da Rocha;2022;2;Noite;40;221;5.53;67.650;96.250
+264;Gestão de Energia e Eficiência Energética;70;Fatec Franco da Rocha;2022;2;Noite;40;56;1.40;34.100;85.315
+194;Análise e Desenvolvimento de Sistemas;15;Fatec Garça - Dep. Julio Julinho Marcondes de Moura;2022;2;Noite;40;109;2.73;59.500;84.425
+194;Análise e Desenvolvimento de Sistemas;15;Fatec Garça - Dep. Julio Julinho Marcondes de Moura;2022;2;Manhã;40;64;1.60;42.350;80.513
+245;Gestão Empresarial;15;Fatec Garça - Dep. Julio Julinho Marcondes de Moura;2022;2;EaD;20;33;1.65;50.250;74.015
+245;Gestão Empresarial;15;Fatec Garça - Dep. Julio Julinho Marcondes de Moura;2022;2;Manhã;40;64;1.60;38.138;73.150
+245;Gestão Empresarial;15;Fatec Garça - Dep. Julio Julinho Marcondes de Moura;2022;2;Noite;40;60;1.50;40.115;73.733
+263;Manufatura Avançada;15;Fatec Garça - Dep. Julio Julinho Marcondes de Moura;2022;2;Manhã;0;0;0;0;0
+111;Mecatrônica Industrial;15;Fatec Garça - Dep. Julio Julinho Marcondes de Moura;2022;2;Noite;40;65;1.63;34.925;80.795
+194;Análise e Desenvolvimento de Sistemas;8;Fatec Guaratinguetá - Prof. João Mod;2022;2;Tarde;40;100;2.50;61.875;96.615
+186;Gestão Comercial;8;Fatec Guaratinguetá - Prof. João Mod;2022;2;Noite;40;55;1.38;40.700;77.825
+94;Gestão da Produção Industrial;8;Fatec Guaratinguetá - Prof. João Mod;2022;2;Noite;40;69;1.73;48.750;100.000
+97;Gestão da Tecnologia da Informação;8;Fatec Guaratinguetá - Prof. João Mod;2022;2;Noite;40;127;3.18;64.410;100.000
+245;Gestão Empresarial;8;Fatec Guaratinguetá - Prof. João Mod;2022;2;EaD;20;71;3.55;64.075;90.125
+245;Gestão Empresarial;8;Fatec Guaratinguetá - Prof. João Mod;2022;2;Noite;40;97;2.43;60.775;98.725
+187;Gestão Financeira;8;Fatec Guaratinguetá - Prof. João Mod;2022;2;Noite;40;62;1.55;44.635;85.250
+179;Logística;8;Fatec Guaratinguetá - Prof. João Mod;2022;2;Noite;40;87;2.18;52.800;89.100
+194;Análise e Desenvolvimento de Sistemas;31;Fatec Guarulhos;2022;2;Tarde;40;199;4.98;67.375;88.000
+274;Comércio Exterior;31;Fatec Guarulhos;2022;2;Manhã;40;58;1.45;48.153;92.125
+94;Gestão da Produção Industrial;31;Fatec Guarulhos;2022;2;Noite;40;169;4.23;60.173;88.275
+245;Gestão Empresarial;31;Fatec Guarulhos;2022;2;EaD;20;232;11.60;72.875;91.530
+179;Logística;31;Fatec Guarulhos;2022;2;Tarde;40;39;0.98;37.855;82.500
+179;Logística;31;Fatec Guarulhos;2022;2;Noite;40;251;6.28;66.275;85.033
+208;Logística Aeroportuária;31;Fatec Guarulhos;2022;2;Manhã;40;67;1.68;39.268;89.750
+194;Análise e Desenvolvimento de Sistemas;9;Fatec Indaiatuba - Dr. Archimedes Lammoglia;2022;2;Noite;40;406;10.15;78.650;93.790
+274;Comércio Exterior;9;Fatec Indaiatuba - Dr. Archimedes Lammoglia;2022;2;Noite;40;137;3.43;63.800;94.250
+253;Gestão de Serviços;9;Fatec Indaiatuba - Dr. Archimedes Lammoglia;2022;2;Manhã;40;64;1.60;40.170;86.000
+245;Gestão Empresarial;9;Fatec Indaiatuba - Dr. Archimedes Lammoglia;2022;2;Tarde;40;67;1.68;47.000;93.225
+245;Gestão Empresarial;9;Fatec Indaiatuba - Dr. Archimedes Lammoglia;2022;2;Noite;40;202;5.05;66.825;92.095
+245;Gestão Empresarial;9;Fatec Indaiatuba - Dr. Archimedes Lammoglia;2022;2;EaD;20;157;7.85;72.600;100.000
+208;Logística Aeroportuária;9;Fatec Indaiatuba - Dr. Archimedes Lammoglia;2022;2;Manhã;40;65;1.63;36.850;84.975
+222;Redes de Computadores;9;Fatec Indaiatuba - Dr. Archimedes Lammoglia;2022;2;Manhã;40;65;1.63;45.250;82.225
+75;Agronegócio;27;Fatec Itapetininga - Prof. Antonio Belizandro Barbosa Rezende;2022;2;Noite;40;78;1.95;45.200;79.250
+194;Análise e Desenvolvimento de Sistemas;27;Fatec Itapetininga - Prof. Antonio Belizandro Barbosa Rezende;2022;2;Manhã;40;63;1.58;49.775;96.525
+194;Análise e Desenvolvimento de Sistemas;27;Fatec Itapetininga - Prof. Antonio Belizandro Barbosa Rezende;2022;2;Noite;40;161;4.03;67.375;97.350
+274;Comércio Exterior;27;Fatec Itapetininga - Prof. Antonio Belizandro Barbosa Rezende;2022;2;Manhã;40;47;1.18;38.250;70.400
+274;Comércio Exterior;27;Fatec Itapetininga - Prof. Antonio Belizandro Barbosa Rezende;2022;2;Noite;40;57;1.43;43.175;88.550
+226;Gestão Ambiental;27;Fatec Itapetininga - Prof. Antonio Belizandro Barbosa Rezende;2022;2;Manhã;40;44;1.10;31.350;83.750
+94;Gestão da Produção Industrial;27;Fatec Itapetininga - Prof. Antonio Belizandro Barbosa Rezende;2022;2;Noite;40;92;2.30;50.325;77.688
+245;Gestão Empresarial;27;Fatec Itapetininga - Prof. Antonio Belizandro Barbosa Rezende;2022;2;EaD;20;104;5.20;68.750;86.075
+275;Desenvolvimento de Software Multiplataforma;63;Fatec Itapira - Ogari de Castro Pacheco;2022;2;Noite;40;78;1.95;56.100;89.650
+94;Gestão da Produção Industrial;63;Fatec Itapira - Ogari de Castro Pacheco;2022;2;Noite;40;55;1.38;42.250;82.775
+245;Gestão Empresarial;63;Fatec Itapira - Ogari de Castro Pacheco;2022;2;Noite;40;58;1.45;39.140;89.500
+186;Gestão Comercial;22;Fatec Itaquaquecetuba;2022;2;Noite;40;130;3.25;62.433;86.350
+186;Gestão Comercial;22;Fatec Itaquaquecetuba;2022;2;Tarde;40;32;0.80;30.800;76.725
+97;Gestão da Tecnologia da Informação;22;Fatec Itaquaquecetuba;2022;2;Manhã;40;100;2.50;57.065;90.200
+245;Gestão Empresarial;22;Fatec Itaquaquecetuba;2022;2;EaD;20;141;7.05;69.250;89.100
+165;Secretariado;22;Fatec Itaquaquecetuba;2022;2;Noite;40;44;1.10;33.750;79.475
+165;Secretariado;22;Fatec Itaquaquecetuba;2022;2;Manhã;40;28;0.70;24.578;78.818
+275;Desenvolvimento de Software Multiplataforma;66;Fatec Itatiba;2022;2;Tarde;0;0;0;0;0
+94;Gestão da Produção Industrial;66;Fatec Itatiba;2022;2;Noite;40;62;1.55;44.918;92.125
+245;Gestão Empresarial;66;Fatec Itatiba;2022;2;Manhã;0;0;0;0;0
+194;Análise e Desenvolvimento de Sistemas;39;Fatec Itu - Dom Amaury Castanho;2022;2;Manhã;40;91;2.28;58.300;92.250
+163;Eventos;39;Fatec Itu - Dom Amaury Castanho;2022;2;Noite;40;38;0.95;23.448;88.275
+97;Gestão da Tecnologia da Informação;39;Fatec Itu - Dom Amaury Castanho;2022;2;Noite;40;109;2.73;59.125;84.000
+245;Gestão Empresarial;39;Fatec Itu - Dom Amaury Castanho;2022;2;Manhã;40;41;1.03;28.000;75.145
+245;Gestão Empresarial;39;Fatec Itu - Dom Amaury Castanho;2022;2;EaD;20;68;3.40;62.998;84.425
+111;Mecatrônica Industrial;39;Fatec Itu - Dom Amaury Castanho;2022;2;Manhã;40;49;1.23;25.708;82.775
+125;Biocombustíveis;36;Fatec Jaboticabal - Nilo de Stéfani;2022;2;Manhã;40;52;1.30;18.928;69.495
+125;Biocombustíveis;36;Fatec Jaboticabal - Nilo de Stéfani;2022;2;Noite;40;55;1.38;32.750;87.000
+226;Gestão Ambiental;36;Fatec Jaboticabal - Nilo de Stéfani;2022;2;Noite;40;43;1.08;17.000;78.925
+245;Gestão Empresarial;36;Fatec Jaboticabal - Nilo de Stéfani;2022;2;EaD;20;76;3.80;66.825;87.250
+259;Marketing;36;Fatec Jaboticabal - Nilo de Stéfani;2022;2;Manhã;40;45;1.13;24.200;84.468
+257;Geoprocessamento;52;Fatec Jacareí- Prof. Francisco de Moura;2022;2;Noite;40;62;1.55;46.865;95.425
+149;Meio Ambiente e Recursos Hídricos;52;Fatec Jacareí- Prof. Francisco de Moura;2022;2;Manhã;40;49;1.23;35.200;78.100
+75;Agronegócio;32;Fatec Jales - Prof. José Camargo;2022;2;Noite;40;63;1.58;38.250;74.525
+194;Análise e Desenvolvimento de Sistemas;32;Fatec Jales - Prof. José Camargo;2022;2;Manhã;40;66;1.65;48.400;86.075
+245;Gestão Empresarial;32;Fatec Jales - Prof. José Camargo;2022;2;EaD;20;45;2.25;42.075;84.750
+245;Gestão Empresarial;32;Fatec Jales - Prof. José Camargo;2022;2;Noite;40;67;1.68;46.750;83.325
+197;Sistemas para Internet;32;Fatec Jales - Prof. José Camargo;2022;2;Noite;40;71;1.78;55.550;87.725
+90;Construção Naval;5;Fatec Jahu;2022;2;Manhã;40;62;1.55;19.525;81.125
+94;Gestão da Produção Industrial;5;Fatec Jahu;2022;2;Noite;40;77;1.93;42.625;74.598
+97;Gestão da Tecnologia da Informação;5;Fatec Jahu;2022;2;Noite;40;100;2.50;58.575;100.000
+245;Gestão Empresarial;5;Fatec Jahu;2022;2;EaD;20;87;4.35;64.750;81.400
+179;Logística;5;Fatec Jahu;2022;2;Noite;40;72;1.80;50.285;85.525
+149;Meio Ambiente e Recursos Hídricos;5;Fatec Jahu;2022;2;Manhã;40;61;1.53;48.750;90.500
+109;Sistemas Navais;5;Fatec Jahu;2022;2;Manhã;40;63;1.58;33.900;69.575
+197;Sistemas para Internet;5;Fatec Jahu;2022;2;Manhã;40;62;1.55;45.100;84.750
+194;Análise e Desenvolvimento de Sistemas;12;Fatec Jundiaí - Deputado Ary Fossen;2022;2;Tarde;40;195;4.88;72.875;94.355
+278;Defesa Cibernética;12;Fatec Jundiaí - Deputado Ary Fossen;2022;2;Noite;40;178;4.45;74.000;93.225
+163;Eventos;12;Fatec Jundiaí - Deputado Ary Fossen;2022;2;Manhã;40;34;0.85;38.703;80.000
+226;Gestão Ambiental;12;Fatec Jundiaí - Deputado Ary Fossen;2022;2;Tarde;40;30;0.75;41.528;94.600
+97;Gestão da Tecnologia da Informação;12;Fatec Jundiaí - Deputado Ary Fossen;2022;2;Noite;40;216;5.40;71.500;93.508
+245;Gestão Empresarial;12;Fatec Jundiaí - Deputado Ary Fossen;2022;2;EaD;20;235;11.75;78.375;94.355
+179;Logística;12;Fatec Jundiaí - Deputado Ary Fossen;2022;2;Noite;40;161;4.03;64.625;90.965
+179;Logística;12;Fatec Jundiaí - Deputado Ary Fossen;2022;2;Manhã;40;82;2.05;55.000;86.350
+273;Sistemas Embarcados;12;Fatec Jundiaí - Deputado Ary Fossen;2022;2;Manhã;40;54;1.35;44.825;93.775
+194;Análise e Desenvolvimento de Sistemas;44;Fatec Lins - Prof. Antonio Seabra;2022;2;Noite;40;110;2.75;56.218;85.250
+94;Gestão da Produção Industrial;44;Fatec Lins - Prof. Antonio Seabra;2022;2;Manhã;40;57;1.43;29.945;66.000
+269;Gestão da Qualidade;44;Fatec Lins - Prof. Antonio Seabra;2022;2;Noite;40;65;1.63;41.800;78.535
+245;Gestão Empresarial;44;Fatec Lins - Prof. Antonio Seabra;2022;2;EaD;20;59;2.95;62.830;90.200
+179;Logística;44;Fatec Lins - Prof. Antonio Seabra;2022;2;Noite;40;58;1.45;39.833;85.250
+197;Sistemas para Internet;44;Fatec Lins - Prof. Antonio Seabra;2022;2;Manhã;40;56;1.40;34.000;71.500
+76;Alimentos;24;Fatec Marília - Estudante Rafael Almeida Camarinha;2022;2;Manhã;40;67;1.68;18.150;74.750
+76;Alimentos;24;Fatec Marília - Estudante Rafael Almeida Camarinha;2022;2;Noite;40;62;1.55;37.125;74.750
+186;Gestão Comercial;24;Fatec Marília - Estudante Rafael Almeida Camarinha;2022;2;Noite;40;64;1.60;43.788;75.428
+245;Gestão Empresarial;24;Fatec Marília - Estudante Rafael Almeida Camarinha;2022;2;EaD;20;91;4.55;66.000;82.775
+266;Análise de Processos Agroindustriais;73;Fatec Matão - Luiz Marchesan;2022;2;Noite;40;122;3.05;54.523;79.200
+275;Desenvolvimento de Software Multiplataforma;73;Fatec Matão - Luiz Marchesan;2022;2;Manhã;40;81;2.03;58.575;93.508
+267;Desenvolvimento de Produtos Plásticos;11;Fatec Mauá;2022;2;Manhã;0;0;0;0;0
+275;Desenvolvimento de Software Multiplataforma;11;Fatec Mauá;2022;2;Noite;40;309;7.73;77.825;100.000
+240;Fabricação Mecânica;11;Fatec Mauá;2022;2;Manhã;40;54;1.35;33.218;87.858
+240;Fabricação Mecânica;11;Fatec Mauá;2022;2;Noite;40;113;2.83;56.500;77.508
+245;Gestão Empresarial;11;Fatec Mauá;2022;2;EaD;20;159;7.95;72.885;91.300
+100;Informática para Negócios;11;Fatec Mauá;2022;2;Noite;40;103;2.58;60.500;89.270
+100;Informática para Negócios;11;Fatec Mauá;2022;2;Manhã;40;57;1.43;48.219;83.620
+179;Logística;11;Fatec Mauá;2022;2;Manhã;40;61;1.53;45.100;85.315
+179;Logística;11;Fatec Mauá;2022;2;Noite;40;186;4.65;66.105;89.100
+234;Polímeros;11;Fatec Mauá;2022;2;Noite;40;66;1.65;45.750;92.943
+75;Agronegócio;16;Fatec Mococa;2022;2;Noite;40;64;1.60;29.000;78.818
+194;Análise e Desenvolvimento de Sistemas;16;Fatec Mococa;2022;2;Noite;40;109;2.73;61.875;93.775
+97;Gestão da Tecnologia da Informação;16;Fatec Mococa;2022;2;Manhã;40;54;1.35;30.800;91.025
+245;Gestão Empresarial;16;Fatec Mococa;2022;2;Noite;40;98;2.45;54.725;97.350
+245;Gestão Empresarial;16;Fatec Mococa;2022;2;EaD;20;72;3.60;67.925;94.875
+75;Agronegócio;45;Fatec Mogi das Cruzes;2022;2;Noite;40;95;2.38;55.825;88.423
+75;Agronegócio;45;Fatec Mogi das Cruzes;2022;2;Tarde;40;51;1.28;24.200;80.250
+194;Análise e Desenvolvimento de Sistemas;45;Fatec Mogi das Cruzes;2022;2;Noite;40;539;13.48;81.000;100.000
+194;Análise e Desenvolvimento de Sistemas;45;Fatec Mogi das Cruzes;2022;2;Tarde;40;185;4.63;75.428;100.000
+224;Gestão de Recursos Humanos;45;Fatec Mogi das Cruzes;2022;2;Manhã;40;87;2.18;51.698;81.000
+245;Gestão Empresarial;45;Fatec Mogi das Cruzes;2022;2;EaD;20;231;11.55;74.015;94.875
+179;Logística;45;Fatec Mogi das Cruzes;2022;2;Manhã;40;79;1.98;55.000;88.750
+194;Análise e Desenvolvimento de Sistemas;30;Fatec Mogi Mirim - Arthur de Azevedo;2022;2;Noite;40;241;6.03;75.900;100.000
+194;Análise e Desenvolvimento de Sistemas;30;Fatec Mogi Mirim - Arthur de Azevedo;2022;2;Manhã;40;77;1.93;57.200;85.000
+240;Fabricação Mecânica;30;Fatec Mogi Mirim - Arthur de Azevedo;2022;2;Manhã;40;49;1.23;29.150;86.445
+245;Gestão Empresarial;30;Fatec Mogi Mirim - Arthur de Azevedo;2022;2;EaD;20;162;8.10;74.250;92.950
+111;Mecatrônica Industrial;30;Fatec Mogi Mirim - Arthur de Azevedo;2022;2;Tarde;40;45;1.13;27.225;88.275
+235;Projetos Mecânicos;30;Fatec Mogi Mirim - Arthur de Azevedo;2022;2;Noite;40;86;2.15;50.600;83.325
+92;Automação Industrial;49;Fatec Osasco - Pref. Hirant Sanazar;2022;2;Manhã;40;74;1.85;49.500;89.100
+92;Automação Industrial;49;Fatec Osasco - Pref. Hirant Sanazar;2022;2;Noite;40;217;5.43;67.375;98.310
+275;Desenvolvimento de Software Multiplataforma;49;Fatec Osasco - Pref. Hirant Sanazar;2022;2;Noite;40;292;7.30;76.000;93.775
+245;Gestão Empresarial;49;Fatec Osasco - Pref. Hirant Sanazar;2022;2;EaD;20;229;11.45;77.275;90.000
+187;Gestão Financeira;49;Fatec Osasco - Pref. Hirant Sanazar;2022;2;Tarde;40;52;1.30;33.053;85.800
+187;Gestão Financeira;49;Fatec Osasco - Pref. Hirant Sanazar;2022;2;Noite;40;259;6.48;72.885;100.000
+201;Manutenção Industrial;49;Fatec Osasco - Pref. Hirant Sanazar;2022;2;Noite;40;107;2.68;56.375;91.025
+201;Manutenção Industrial;49;Fatec Osasco - Pref. Hirant Sanazar;2022;2;Manhã;40;45;1.13;34.375;71.473
+222;Redes de Computadores;49;Fatec Osasco - Pref. Hirant Sanazar;2022;2;Tarde;40;52;1.30;20.075;82.500
+222;Redes de Computadores;49;Fatec Osasco - Pref. Hirant Sanazar;2022;2;Noite;40;137;3.43;58.850;88.000
+115;Sistemas Biomédicos;49;Fatec Osasco - Pref. Hirant Sanazar;2022;2;Manhã;40;89;2.23;48.750;91.750
+75;Agronegócio;6;Fatec Ourinhos;2022;2;Noite;40;93;2.33;51.980;75.900
+75;Agronegócio;6;Fatec Ourinhos;2022;2;Manhã;40;65;1.63;20.350;90.118
+194;Análise e Desenvolvimento de Sistemas;6;Fatec Ourinhos;2022;2;Tarde;40;70;1.75;49.720;93.000
+194;Análise e Desenvolvimento de Sistemas;6;Fatec Ourinhos;2022;2;Noite;40;288;7.20;75.900;98.028
+270;Ciência de Dados;6;Fatec Ourinhos;2022;2;Noite;40;75;1.88;51.975;90.250
+245;Gestão Empresarial;6;Fatec Ourinhos;2022;2;EaD;20;102;5.10;69.025;83.325
+199;Jogos Digitais;6;Fatec Ourinhos;2022;2;Manhã;40;62;1.55;37.950;97.500
+198;Segurança da Informação;6;Fatec Ourinhos;2022;2;Manhã;40;70;1.75;39.651;82.225
+198;Segurança da Informação;6;Fatec Ourinhos;2022;2;Noite;40;85;2.13;61.868;91.850
+256;Gestão de Negócios e Inovação;25;Fatec Pindamonhangaba;2022;2;Noite;40;76;1.90;49.438;75.250
+245;Gestão Empresarial;25;Fatec Pindamonhangaba;2022;2;EaD;20;122;6.10;69.750;91.300
+201;Manutenção Industrial;25;Fatec Pindamonhangaba;2022;2;Noite;40;104;2.60;51.700;93.225
+246;Mecânica - Processos de Soldagem;25;Fatec Pindamonhangaba;2022;2;Manhã;40;42;1.05;26.250;81.400
+223;Processos Metalúrgicos;25;Fatec Pindamonhangaba;2022;2;Noite;40;124;3.10;59.950;85.033
+235;Projetos Mecânicos;25;Fatec Pindamonhangaba;2022;2;Manhã;40;34;0.85;27.000;82.225
+76;Alimentos;37;Fatec Piracicaba - Dep. Roque Trevisan;2022;2;Manhã;40;53;1.33;32.750;83.875
+125;Biocombustíveis;37;Fatec Piracicaba - Dep. Roque Trevisan;2022;2;Noite;40;61;1.53;43.175;84.750
+245;Gestão Empresarial;37;Fatec Piracicaba - Dep. Roque Trevisan;2022;2;Manhã;40;56;1.40;42.075;84.750
+245;Gestão Empresarial;37;Fatec Piracicaba - Dep. Roque Trevisan;2022;2;Noite;40;161;4.03;66.825;89.925
+262;Big Data no Agronegócio;55;Fatec Pompéia - Shunji Nishimura;2022;2;Tarde;40;61;1.53;29.975;91.300
+191;Mecanização em Agricultura de Precisão;55;Fatec Pompéia - Shunji Nishimura;2022;2;Manhã;40;67;1.68;39.600;78.100
+191;Mecanização em Agricultura de Precisão;55;Fatec Pompéia - Shunji Nishimura;2022;2;Noite;40;182;4.55;59.125;95.425
+194;Análise e Desenvolvimento de Sistemas;14;Fatec Praia Grande;2022;2;Tarde;40;166;4.15;69.025;82.773
+194;Análise e Desenvolvimento de Sistemas;14;Fatec Praia Grande;2022;2;Noite;40;525;13.13;79.750;95.425
+274;Comércio Exterior;14;Fatec Praia Grande;2022;2;Manhã;40;61;1.53;49.225;88.140
+274;Comércio Exterior;14;Fatec Praia Grande;2022;2;Noite;40;138;3.45;62.433;90.475
+245;Gestão Empresarial;14;Fatec Praia Grande;2022;2;Manhã;40;66;1.65;45.200;89.375
+245;Gestão Empresarial;14;Fatec Praia Grande;2022;2;Noite;40;168;4.20;64.075;90.500
+245;Gestão Empresarial;14;Fatec Praia Grande;2022;2;EaD;20;126;6.30;67.750;86.445
+225;Processos Químicos;14;Fatec Praia Grande;2022;2;Manhã;40;46;1.15;29.425;87.725
+225;Processos Químicos;14;Fatec Praia Grande;2022;2;Noite;40;80;2.00;49.438;84.203
+75;Agronegócio;29;Fatec Presidente Prudente;2022;2;Noite;40;67;1.68;42.350;74.800
+194;Análise e Desenvolvimento de Sistemas;29;Fatec Presidente Prudente;2022;2;Noite;40;203;5.08;71.225;99.000
+194;Análise e Desenvolvimento de Sistemas;29;Fatec Presidente Prudente;2022;2;Manhã;40;81;2.03;57.475;93.500
+163;Eventos;29;Fatec Presidente Prudente;2022;2;Noite;40;62;1.55;36.565;74.525
+245;Gestão Empresarial;29;Fatec Presidente Prudente;2022;2;Noite;40;115;2.88;56.650;84.718
+245;Gestão Empresarial;29;Fatec Presidente Prudente;2022;2;EaD;20;119;5.95;69.000;87.725
+259;Marketing;29;Fatec Presidente Prudente;2022;2;Manhã;40;68;1.70;42.093;82.225
+268;Produção Agropecuária;29;Fatec Presidente Prudente;2022;2;Manhã;40;62;1.55;31.750;79.000
+275;Desenvolvimento de Software Multiplataforma;75;Fatec Registro;2022;2;Noite;35;92;2.63;63.525;92.943
+194;Análise e Desenvolvimento de Sistemas;65;Fatec Ribeirão Preto;2022;2;Manhã;40;164;4.10;69.575;93.225
+194;Análise e Desenvolvimento de Sistemas;65;Fatec Ribeirão Preto;2022;2;Noite;40;403;10.08;81.675;100.000
+256;Gestão de Negócios e Inovação;65;Fatec Ribeirão Preto;2022;2;Noite;40;121;3.03;64.900;95.975
+115;Sistemas Biomédicos;65;Fatec Ribeirão Preto;2022;2;Noite;40;82;2.05;54.917;94.600
+194;Análise e Desenvolvimento de Sistemas;64;Fatec Santana de Parnaíba;2022;2;Manhã;40;131;3.28;58.575;99.158
+270;Ciência de Dados;64;Fatec Santana de Parnaíba;2022;2;Noite;40;117;2.93;60.173;89.925
+186;Gestão Comercial;64;Fatec Santana de Parnaíba;2022;2;Noite;40;150;3.75;59.400;89.650
+198;Segurança da Informação;64;Fatec Santana de Parnaíba;2022;2;Noite;40;110;2.75;54.523;87.010
+118;Eletrônica Automotiva;21;Fatec Santo André;2022;2;Manhã;40;37;0.93;30.385;93.790
+118;Eletrônica Automotiva;21;Fatec Santo André;2022;2;Noite;40;99;2.48;58.300;92.125
+250;Mecânica Automobilística;21;Fatec Santo André;2022;2;Noite;40;137;3.43;64.149;89.270
+111;Mecatrônica Industrial;21;Fatec Santo André;2022;2;Manhã;40;99;2.48;53.750;89.750
+194;Análise e Desenvolvimento de Sistemas;4;Fatec Baixada Santista - Rubens Lara;2022;2;Noite;40;478;11.95;81.250;97.463
+194;Análise e Desenvolvimento de Sistemas;4;Fatec Baixada Santista - Rubens Lara;2022;2;Manhã;40;214;5.35;76.500;92.378
+270;Ciência de Dados;4;Fatec Baixada Santista - Rubens Lara;2022;2;Manhã;40;61;1.53;46.750;86.445
+224;Gestão de Recursos Humanos;4;Fatec Baixada Santista - Rubens Lara;2022;2;Noite;40;126;3.15;56.500;83.903
+245;Gestão Empresarial;4;Fatec Baixada Santista - Rubens Lara;2022;2;Manhã;40;57;1.43;45.650;83.903
+245;Gestão Empresarial;4;Fatec Baixada Santista - Rubens Lara;2022;2;EaD;20;142;7.10;72.325;89.650
+254;Gestão Portuária;4;Fatec Baixada Santista - Rubens Lara;2022;2;Manhã;40;76;1.90;45.375;81.675
+254;Gestão Portuária;4;Fatec Baixada Santista - Rubens Lara;2022;2;Noite;40;177;4.43;58.750;97.463
+179;Logística;4;Fatec Baixada Santista - Rubens Lara;2022;2;Manhã;40;59;1.48;37.675;86.075
+179;Logística;4;Fatec Baixada Santista - Rubens Lara;2022;2;Noite;40;172;4.30;68.200;93.508
+197;Sistemas para Internet;4;Fatec Baixada Santista - Rubens Lara;2022;2;Manhã;40;68;1.70;57.750;92.675
+92;Automação Industrial;18;Fatec São Bernardo do Campo - Adib Moisés Dib;2022;2;Noite;40;302;7.55;70.950;94.600
+92;Automação Industrial;18;Fatec São Bernardo do Campo - Adib Moisés Dib;2022;2;Manhã;40;91;2.28;55.653;94.355
+245;Gestão Empresarial;18;Fatec São Bernardo do Campo - Adib Moisés Dib;2022;2;EaD;20;169;8.45;72.325;98.175
+100;Informática para Negócios;18;Fatec São Bernardo do Campo - Adib Moisés Dib;2022;2;Manhã;40;59;1.48;48.750;84.975
+100;Informática para Negócios;18;Fatec São Bernardo do Campo - Adib Moisés Dib;2022;2;Noite;40;146;3.65;62.433;100.000
+263;Manufatura Avançada;18;Fatec São Bernardo do Campo - Adib Moisés Dib;2022;2;Noite;40;81;2.03;54.175;82.225
+194;Análise e Desenvolvimento de Sistemas;33;Fatec São Caetano do Sul - Antonio Russo;2022;2;Manhã;40;244;6.10;72.600;98.028
+194;Análise e Desenvolvimento de Sistemas;33;Fatec São Caetano do Sul - Antonio Russo;2022;2;Tarde;40;107;2.68;67.925;87.575
+274;Comércio Exterior;33;Fatec São Caetano do Sul - Antonio Russo;2022;2;Tarde;40;38;0.95;29.250;88.423
+245;Gestão Empresarial;33;Fatec São Caetano do Sul - Antonio Russo;2022;2;EaD;20;120;6.00;72.885;91.025
+199;Jogos Digitais;33;Fatec São Caetano do Sul - Antonio Russo;2022;2;Noite;40;104;2.60;70.400;100.000
+198;Segurança da Informação;33;Fatec São Caetano do Sul - Antonio Russo;2022;2;Noite;40;233;5.83;76.840;93.775
+198;Segurança da Informação;33;Fatec São Caetano do Sul - Antonio Russo;2022;2;Manhã;40;65;1.63;48.400;87.450
+224;Gestão de Recursos Humanos;57;Fatec São Carlos;2022;2;Noite;40;100;2.50;56.292;90.750
+245;Gestão Empresarial;57;Fatec São Carlos;2022;2;Noite;40;97;2.43;56.925;82.500
+75;Agronegócio;17;Fatec São José do Rio Preto;2022;2;Manhã;40;62;1.55;14.500;79.750
+75;Agronegócio;17;Fatec São José do Rio Preto;2022;2;Noite;40;87;2.18;50.568;83.055
+194;Análise e Desenvolvimento de Sistemas;17;Fatec São José do Rio Preto;2022;2;Tarde;40;209;5.23;77.550;100.000
+245;Gestão Empresarial;17;Fatec São José do Rio Preto;2022;2;EaD;20;217;10.85;75.075;93.775
+100;Informática para Negócios;17;Fatec São José do Rio Preto;2022;2;Manhã;40;71;1.78;48.819;85.250
+100;Informática para Negócios;17;Fatec São José do Rio Preto;2022;2;Noite;40;165;4.13;67.235;93.225
+194;Análise e Desenvolvimento de Sistemas;28;Fatec São José dos Campos - Prof. Jessen Vidal;2022;2;Manhã;40;281;7.03;75.750;95.500
+221;Banco de Dados;28;Fatec São José dos Campos - Prof. Jessen Vidal;2022;2;Noite;40;210;5.25;75.428;92.400
+275;Desenvolvimento de Software Multiplataforma;28;Fatec São José dos Campos - Prof. Jessen Vidal;2022;2;Manhã;40;109;2.73;68.750;97.350
+94;Gestão da Produção Industrial;28;Fatec São José dos Campos - Prof. Jessen Vidal;2022;2;Noite;40;82;2.05;52.250;85.525
+245;Gestão Empresarial;28;Fatec São José dos Campos - Prof. Jessen Vidal;2022;2;EaD;20;143;7.15;78.100;90.118
+179;Logística;28;Fatec São José dos Campos - Prof. Jessen Vidal;2022;2;Noite;40;111;2.78;62.000;91.300
+179;Logística;28;Fatec São José dos Campos - Prof. Jessen Vidal;2022;2;Manhã;40;48;1.20;36.443;98.175
+263;Manufatura Avançada;28;Fatec São José dos Campos - Prof. Jessen Vidal;2022;2;Manhã;40;41;1.03;35.250;78.375
+219;Manutenção de Aeronaves;28;Fatec São José dos Campos - Prof. Jessen Vidal;2022;2;Noite;40;104;2.60;58.850;92.675
+251;Projetos de Estruturas Aeronáuticas;28;Fatec São José dos Campos - Prof. Jessen Vidal;2022;2;Noite;40;54;1.35;34.925;88.705
+194;Análise e Desenvolvimento de Sistemas;48;Fatec Ipiranga - Pastor Enéas Tognini;2022;2;Noite;40;414;10.35;81.400;100.000
+194;Análise e Desenvolvimento de Sistemas;48;Fatec Ipiranga - Pastor Enéas Tognini;2022;2;Tarde;40;80;2.00;63.800;96.250
+276;Big Data para Negócios;48;Fatec Ipiranga - Pastor Enéas Tognini;2022;2;Manhã;40;79;1.98;60.173;89.100
+163;Eventos;48;Fatec Ipiranga - Pastor Enéas Tognini;2022;2;Manhã;40;49;1.23;39.050;98.175
+186;Gestão Comercial;48;Fatec Ipiranga - Pastor Enéas Tognini;2022;2;Noite;40;124;3.10;63.280;92.400
+186;Gestão Comercial;48;Fatec Ipiranga - Pastor Enéas Tognini;2022;2;Manhã;40;50;1.25;35.030;81.500
+224;Gestão de Recursos Humanos;48;Fatec Ipiranga - Pastor Enéas Tognini;2022;2;Noite;40;148;3.70;64.075;93.500
+245;Gestão Empresarial;48;Fatec Ipiranga - Pastor Enéas Tognini;2022;2;EaD;20;109;5.45;70.908;94.600
+92;Automação Industrial;53;Fatec Itaquera - Prof. Miguel Reale;2022;2;Tarde;40;49;1.23;25.990;82.250
+92;Automação Industrial;53;Fatec Itaquera - Prof. Miguel Reale;2022;2;Noite;40;266;6.65;66.953;100.000
+275;Desenvolvimento de Software Multiplataforma;53;Fatec Itaquera - Prof. Miguel Reale;2022;2;Tarde;40;101;2.53;57.375;94.638
+240;Fabricação Mecânica;53;Fatec Itaquera - Prof. Miguel Reale;2022;2;Noite;40;83;2.08;49.849;84.975
+201;Manutenção Industrial;53;Fatec Itaquera - Prof. Miguel Reale;2022;2;Manhã;40;53;1.33;29.975;72.875
+246;Mecânica - Processos de Soldagem;53;Fatec Itaquera - Prof. Miguel Reale;2022;2;Manhã;40;55;1.38;27.775;64.128
+246;Mecânica - Processos de Soldagem;53;Fatec Itaquera - Prof. Miguel Reale;2022;2;Noite;40;66;1.65;43.450;85.250
+255;Refrigeração, Ventilação e Ar Condicionado;53;Fatec Itaquera - Prof. Miguel Reale;2022;2;Manhã;40;50;1.25;24.475;89.270
+255;Refrigeração, Ventilação e Ar Condicionado;53;Fatec Itaquera - Prof. Miguel Reale;2022;2;Noite;40;188;4.70;60.173;95.975
+194;Análise e Desenvolvimento de Sistemas;1;Fatec São Paulo;2022;2;Noite;80;1265;15.81;84.750;100.000
+194;Análise e Desenvolvimento de Sistemas;1;Fatec São Paulo;2022;2;Manhã;40;530;13.25;83.875;100.000
+194;Análise e Desenvolvimento de Sistemas;1;Fatec São Paulo;2022;2;Tarde;40;193;4.83;78.375;100.000
+91;Construção Civil - Edifícios;1;Fatec São Paulo;2022;2;Manhã;80;98;1.23;26.000;92.400
+91;Construção Civil - Edifícios;1;Fatec São Paulo;2022;2;Noite;60;258;4.30;68.930;100.000
+252;Eletrônica Industrial;1;Fatec São Paulo;2022;2;Noite;40;166;4.15;68.475;97.350
+108;Estradas;1;Fatec São Paulo;2022;2;Noite;40;57;1.43;46.613;100.000
+227;Gestão de Turismo;1;Fatec São Paulo;2022;2;Manhã;40;94;2.35;61.325;93.500
+227;Gestão de Turismo;1;Fatec São Paulo;2022;2;Tarde;40;30;0.75;43.505;80.513
+245;Gestão Empresarial;1;Fatec São Paulo;2022;2;EaD;20;361;18.05;82.750;100.000
+96;Hidráulica e Saneamento Ambiental;1;Fatec São Paulo;2022;2;Manhã;0;0;0;0;0
+96;Hidráulica e Saneamento Ambiental;1;Fatec São Paulo;2022;2;Noite;40;107;2.68;61.585;99.550
+258;Instalações Elétricas;1;Fatec São Paulo;2022;2;Manhã;40;104;2.60;54.000;100.000
+236;Materiais;1;Fatec São Paulo;2022;2;Manhã;0;0;0;0;0
+104;Mecânica - Processos de Produção;1;Fatec São Paulo;2022;2;Manhã;0;0;0;0;0
+104;Mecânica - Processos de Produção;1;Fatec São Paulo;2022;2;Noite;60;84;1.40;41.750;94.050
+105;Mecânica - Projetos;1;Fatec São Paulo;2022;2;Manhã;80;60;0.75;29.098;86.000
+105;Mecânica - Projetos;1;Fatec São Paulo;2022;2;Noite;60;152;2.53;62.715;95.975
+103;Mecânica de Precisão;1;Fatec São Paulo;2022;2;Manhã;40;29;0.73;30.800;93.500
+261;Microeletrônica;1;Fatec São Paulo;2022;2;Manhã;40;51;1.28;36.575;87.293
+89;Secretariado e Assessoria Internacional;1;Fatec São Paulo;2022;2;Manhã;40;109;2.73;63.345;92.500
+89;Secretariado e Assessoria Internacional;1;Fatec São Paulo;2022;2;Noite;40;207;5.18;68.930;97.180
+106;Soldagem;1;Fatec São Paulo;2022;2;Noite;40;56;1.40;25.750;91.850
+256;Gestão de Negócios e Inovação;59;Fatec Sebrae;2022;2;Manhã;35;70;2.00;60.775;86.900
+256;Gestão de Negócios e Inovação;59;Fatec Sebrae;2022;2;Noite;35;150;4.29;70.400;93.790
+259;Marketing;59;Fatec Sebrae;2022;2;Noite;35;240;6.86;73.168;94.050
+259;Marketing;59;Fatec Sebrae;2022;2;Manhã;35;126;3.60;68.750;100.000
+242;Construção de Edifícios;50;Fatec Tatuapé - Victor Civita;2022;2;Tarde;40;52;1.30;38.703;86.625
+242;Construção de Edifícios;50;Fatec Tatuapé - Victor Civita;2022;2;Noite;40;151;3.78;66.670;98.450
+243;Controle de Obras;50;Fatec Tatuapé - Victor Civita;2022;2;Manhã;40;49;1.23;27.250;74.250
+243;Controle de Obras;50;Fatec Tatuapé - Victor Civita;2022;2;Noite;40;91;2.28;59.500;88.500
+271;Design de Produto com Ênfase em Processos de Produção e Industrialização;50;Fatec Tatuapé - Victor Civita;2022;2;Manhã;40;73;1.83;57.200;90.500
+245;Gestão Empresarial;50;Fatec Tatuapé - Victor Civita;2022;2;EaD;20;240;12.00;74.298;93.225
+218;Transporte Terrestre;50;Fatec Tatuapé - Victor Civita;2022;2;Noite;40;61;1.53;48.250;88.000
+218;Transporte Terrestre;50;Fatec Tatuapé - Victor Civita;2022;2;Manhã;40;46;1.15;31.750;83.600
+194;Análise e Desenvolvimento de Sistemas;10;Fatec Zona Leste;2022;2;Tarde;40;159;3.98;69.213;88.705
+194;Análise e Desenvolvimento de Sistemas;10;Fatec Zona Leste;2022;2;Noite;40;693;17.33;82.750;100.000
+274;Comércio Exterior;10;Fatec Zona Leste;2022;2;Manhã;40;79;1.98;61.000;84.468
+274;Comércio Exterior;10;Fatec Zona Leste;2022;2;Tarde;40;61;1.53;52.788;86.900
+267;Desenvolvimento de Produtos Plásticos;10;Fatec Zona Leste;2022;2;Noite;0;0;0;0;0
+275;Desenvolvimento de Software Multiplataforma;10;Fatec Zona Leste;2022;2;Manhã;40;141;3.53;69.783;94.355
+224;Gestão de Recursos Humanos;10;Fatec Zona Leste;2022;2;Manhã;40;118;2.95;56.375;89.375
+245;Gestão Empresarial;10;Fatec Zona Leste;2022;2;Manhã;40;88;2.20;53.900;93.508
+245;Gestão Empresarial;10;Fatec Zona Leste;2022;2;EaD;20;190;9.50;75.350;95.425
+179;Logística;10;Fatec Zona Leste;2022;2;Noite;40;190;4.75;66.825;91.248
+179;Logística;10;Fatec Zona Leste;2022;2;Manhã;40;65;1.63;44.070;86.350
+234;Polímeros;10;Fatec Zona Leste;2022;2;Noite;40;60;1.50;37.675;89.925
+194;Análise e Desenvolvimento de Sistemas;20;Fatec Zona Sul - Dom Paulo Evaristo Arns;2022;2;Manhã;40;231;5.78;72.050;99.158
+194;Análise e Desenvolvimento de Sistemas;20;Fatec Zona Sul - Dom Paulo Evaristo Arns;2022;2;Noite;40;521;13.03;77.688;98.725
+275;Desenvolvimento de Software Multiplataforma;20;Fatec Zona Sul - Dom Paulo Evaristo Arns;2022;2;Tarde;40;54;1.35;41.750;89.650
+245;Gestão Empresarial;20;Fatec Zona Sul - Dom Paulo Evaristo Arns;2022;2;Manhã;40;65;1.63;48.025;97.500
+245;Gestão Empresarial;20;Fatec Zona Sul - Dom Paulo Evaristo Arns;2022;2;Tarde;40;64;1.60;30.250;88.705
+245;Gestão Empresarial;20;Fatec Zona Sul - Dom Paulo Evaristo Arns;2022;2;EaD;20;202;10.10;73.150;88.550
+179;Logística;20;Fatec Zona Sul - Dom Paulo Evaristo Arns;2022;2;Noite;40;144;3.60;58.195;84.468
+179;Logística;20;Fatec Zona Sul - Dom Paulo Evaristo Arns;2022;2;Tarde;40;51;1.28;33.825;88.140
+186;Gestão Comercial;56;Fatec São Roque;2022;2;Noite;30;79;2.63;59.950;91.850
+227;Gestão de Turismo;56;Fatec São Roque;2022;2;Noite;30;44;1.47;27.403;84.750
+197;Sistemas para Internet;56;Fatec São Roque;2022;2;Noite;30;118;3.93;69.850;93.225
+97;Gestão da Tecnologia da Informação;46;Fatec São Sebastião;2022;2;Manhã;40;58;1.45;40.425;83.600
+245;Gestão Empresarial;46;Fatec São Sebastião;2022;2;EaD;20;57;2.85;65.250;93.775
+245;Gestão Empresarial;46;Fatec São Sebastião;2022;2;Noite;40;63;1.58;47.575;80.795
+179;Logística;46;Fatec São Sebastião;2022;2;Noite;40;45;1.13;21.450;91.025
+94;Gestão da Produção Industrial;38;Fatec Sertãozinho - Dep. Waldyr Alceu Trigo;2022;2;Noite;40;91;2.28;50.600;76.840
+245;Gestão Empresarial;38;Fatec Sertãozinho - Dep. Waldyr Alceu Trigo;2022;2;EaD;20;109;5.45;67.500;88.275
+245;Gestão Empresarial;38;Fatec Sertãozinho - Dep. Waldyr Alceu Trigo;2022;2;Manhã;40;75;1.88;44.635;74.580
+245;Gestão Empresarial;38;Fatec Sertãozinho - Dep. Waldyr Alceu Trigo;2022;2;Noite;40;146;3.65;60.173;83.600
+201;Manutenção Industrial;38;Fatec Sertãozinho - Dep. Waldyr Alceu Trigo;2022;2;Noite;40;58;1.45;34.748;77.275
+246;Mecânica - Processos de Soldagem;38;Fatec Sertãozinho - Dep. Waldyr Alceu Trigo;2022;2;Noite;40;58;1.45;30.793;74.800
+111;Mecatrônica Industrial;38;Fatec Sertãozinho - Dep. Waldyr Alceu Trigo;2022;2;Manhã;40;47;1.18;26.750;74.250
+194;Análise e Desenvolvimento de Sistemas;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;Manhã;40;305;7.63;78.650;100.000
+194;Análise e Desenvolvimento de Sistemas;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;Noite;40;539;13.48;81.950;100.000
+118;Eletrônica Automotiva;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;Tarde;0;0;0;0;0
+240;Fabricação Mecânica;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;Manhã;40;39;0.98;26.500;77.405
+240;Fabricação Mecânica;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;Noite;80;181;2.26;56.375;100.000
+269;Gestão da Qualidade;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;Manhã;40;68;1.70;47.025;77.825
+245;Gestão Empresarial;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;EaD;20;230;11.50;78.375;92.400
+179;Logística;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;Tarde;40;52;1.30;35.030;79.383
+263;Manufatura Avançada;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;Manhã;0;0;0;0;0
+234;Polímeros;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;Noite;40;54;1.35;31.350;88.825
+223;Processos Metalúrgicos;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;Manhã;40;37;0.93;22.600;77.275
+235;Projetos Mecânicos;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;Manhã;40;35;0.88;29.424;94.600
+235;Projetos Mecânicos;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;Noite;40;148;3.70;65.258;89.270
+115;Sistemas Biomédicos;2;Fatec Sorocaba - José Crespo Gonzales;2022;2;Manhã;40;58;1.45;39.750;84.185
+256;Gestão de Negócios e Inovação;72;Fatec Sumaré (Região de Campinas);2022;2;Noite;40;68;1.70;34.925;86.900
+224;Gestão de Recursos Humanos;72;Fatec Sumaré (Região de Campinas);2022;2;Noite;40;92;2.30;52.000;90.750
+224;Gestão de Recursos Humanos;72;Fatec Sumaré (Região de Campinas);2022;2;Manhã;40;41;1.03;33.335;89.000
+75;Agronegócio;7;Fatec Taquaritinga;2022;2;Noite;40;79;1.98;48.590;82.500
+75;Agronegócio;7;Fatec Taquaritinga;2022;2;Tarde;40;57;1.43;24.200;82.225
+194;Análise e Desenvolvimento de Sistemas;7;Fatec Taquaritinga;2022;2;Noite;40;212;5.30;70.125;92.943
+194;Análise e Desenvolvimento de Sistemas;7;Fatec Taquaritinga;2022;2;Tarde;40;39;0.98;29.750;78.925
+245;Gestão Empresarial;7;Fatec Taquaritinga;2022;2;EaD;20;83;4.15;59.325;88.550
+217;Produção Industrial;7;Fatec Taquaritinga;2022;2;Manhã;40;43;1.08;30.500;80.025
+217;Produção Industrial;7;Fatec Taquaritinga;2022;2;Noite;40;57;1.43;37.950;75.075
+197;Sistemas para Internet;7;Fatec Taquaritinga;2022;2;Manhã;40;48;1.20;24.205;78.253
+92;Automação Industrial;26;Fatec Tatuí - Prof. Wilson Roberto Ribeiro de Camargo;2022;2;Noite;40;91;2.28;51.436;79.200
+92;Automação Industrial;26;Fatec Tatuí - Prof. Wilson Roberto Ribeiro de Camargo;2022;2;Manhã;40;47;1.18;39.550;81.400
+97;Gestão da Tecnologia da Informação;26;Fatec Tatuí - Prof. Wilson Roberto Ribeiro de Camargo;2022;2;Noite;40;130;3.25;61.325;85.525
+97;Gestão da Tecnologia da Informação;26;Fatec Tatuí - Prof. Wilson Roberto Ribeiro de Camargo;2022;2;Manhã;40;74;1.85;48.950;86.900
+245;Gestão Empresarial;26;Fatec Tatuí - Prof. Wilson Roberto Ribeiro de Camargo;2022;2;Tarde;40;66;1.65;42.075;96.050
+245;Gestão Empresarial;26;Fatec Tatuí - Prof. Wilson Roberto Ribeiro de Camargo;2022;2;Noite;40;182;4.55;62.998;87.725
+201;Manutenção Industrial;26;Fatec Tatuí - Prof. Wilson Roberto Ribeiro de Camargo;2022;2;Noite;40;51;1.28;32.175;86.445
+201;Manutenção Industrial;26;Fatec Tatuí - Prof. Wilson Roberto Ribeiro de Camargo;2022;2;Manhã;40;54;1.35;29.250;77.123
+220;Produção Fonográfica;26;Fatec Tatuí - Prof. Wilson Roberto Ribeiro de Camargo;2022;2;Tarde;40;72;1.80;56.100;92.500
+194;Análise e Desenvolvimento de Sistemas;51;Fatec Taubaté;2022;2;Noite;40;307;7.68;77.000;97.075
+118;Eletrônica Automotiva;51;Fatec Taubaté;2022;2;Noite;40;58;1.45;27.000;76.450
+224;Gestão de Recursos Humanos;51;Fatec Taubaté;2022;2;Manhã;40;47;1.18;37.950;77.000
+245;Gestão Empresarial;51;Fatec Taubaté;2022;2;EaD;20;100;5.00;70.625;95.975

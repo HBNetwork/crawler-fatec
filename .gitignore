@@ -137,3 +137,6 @@ dmypy.json
 .vscode
 
 */*.csv
+
+grupo-1/server
+venv-grupo-1/

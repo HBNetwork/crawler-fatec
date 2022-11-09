@@ -7,3 +7,16 @@ O real código do curso só é descoberto em demanda, o código utilizado aqui s
 [ ] Separa ETL
 [ ] Mock responses(pypi)
 [X] Adicionar tratamento de exceções.
+
+
+# Install and run
+
+```
+python3 -m venv .venv 
+source .venv/bin/activate 
+pip install -r grupo-1/requirements.txt
+
+```
+
+# Documentation
+[excalidraw](https://excalidraw.com/#room=7f86248508e23696bfcc,2FKknafd2hwdpLG1535Ejg)
